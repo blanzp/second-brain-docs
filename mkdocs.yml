@@ -9,7 +9,7 @@ copyright: Unibrain · notes you own, agents you can trust
 theme:
   name: material
   logo: assets/images/icon.png
-  favicon: assets/images/icon.png
+  favicon: assets/images/favicon.png
   font:
     text: Inter
     code: JetBrains Mono
