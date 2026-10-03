@@ -6,10 +6,13 @@ title: What's new
 
 ## October 2026
 
+- **Slides:** a note with `marp: true` becomes a deck, with a Present mode and PDF export.
+- **Ask your AI of choice:** the Ask button opens Claude, ChatGPT or Gemini, set in Settings.
+- **A new name and home:** Unibrain, at unibrain.dev, with a new logo; light and dark mode you can choose per device.
 - **Usage stats:** your activity by day, app and agent, under Settings.
 - **Named agents:** agents sign their writes, so personas sharing one app are told apart.
 - **Tasks:** collapsible sections per note, with overdue and due-today counts.
-- **Phone app:** bottom tab bar, pull to refresh, back keeps your place, full-screen zoom for images and diagrams, Contents and *Linked from* for long notes, search words highlighted, Organize (rename, move, retag).
+- **Phone app:** bottom tab bar, pull to refresh, back keeps your place, jump to bottom, full-screen zoom for images and diagrams, Contents and *Linked from* for long notes, search words highlighted, Organize (rename, move, retag).
 - **Offline:** an Offline tab showing everything saved, browsing any folder offline, and saved copies on slow connections.
 - **Vault settings:** your conventions in your vault, edited in Settings, followed by every agent. Your own app title.
 - **Instant sync:** changes made outside Unibrain arrive in about a second through GitHub webhooks.

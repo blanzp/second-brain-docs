@@ -35,4 +35,4 @@ Their changes then show as `Igor (claude)` in your history, your Recently change
 
 ## Ask Claude about any note
 
-Every note in the web app has an **Ask Claude** button. It opens a new Claude chat (the Claude app on iPhone) that reads that note through the connector and asks what you'd like to do with it.
+Every note in the web app has an **Ask** button (Claude by default; choose ChatGPT or Gemini in Settings). It opens a new Claude chat (the Claude app on iPhone) that reads that note through the connector and asks what you'd like to do with it.

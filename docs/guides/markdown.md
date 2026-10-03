@@ -19,6 +19,7 @@ Notes are plain Markdown following **Obsidian's conventions**, so they're readab
 | `[^1]` and `[^1]: text` | a footnote |
 | `$x^2$`, `$$ … $$` | math |
 | ```` ```mermaid ```` and 25 more | a [diagram](../features/diagrams.md) |
+| `marp: true` in the properties | the note becomes [slides](../features/slides.md) |
 
 ## Properties
 

@@ -26,7 +26,7 @@ Your agents do most of the writing, so the web app is built for **reading, revie
 - A **tab bar** at the bottom: Home, Folders, New, Tasks, Offline.
 - **Pull down** at the top of any screen to refresh it.
 - **Back keeps your place:** your scroll position, search results and expanded lists.
-- A **back-to-top** button on long pages.
+- **Back-to-top** and **jump-to-bottom** buttons on long pages, handy for logs whose newest entries are at the end.
 
 ## Search
 
@@ -42,7 +42,8 @@ Your agents do most of the writing, so the web app is built for **reading, revie
 - **Contents** button for long notes, and **Linked from** listing the notes that link here.
 - **Tap any image or diagram** to view it full screen, with pinch to zoom.
 - **Tick checkboxes** right in the note.
-- **Ask Claude** opens a Claude chat about the note. **Share** sends the `.md` file through your phone's share sheet.
+- **Ask** opens a chat about the note in the AI you chose in Settings: Claude, ChatGPT or Gemini. **Share** sends the `.md` file through your phone's share sheet.
+- Notes marked as [slides](slides.md) open as a deck you can present or save as a PDF.
 
 ## Writing and organizing
 

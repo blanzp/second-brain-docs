@@ -30,6 +30,10 @@ title: Features
 
     26 diagram types, KaTeX math and syntax-highlighted code.
 
+-   :material-presentation: __[Slides](slides.md)__
+
+    Write a deck in Markdown, present it full screen, save it as a PDF.
+
 -   :material-folder-move-outline: __[Organizing](organize.md)__
 
     Move, rename, retag and archive, with every link kept intact.

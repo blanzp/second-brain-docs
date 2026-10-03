@@ -16,7 +16,8 @@ Your vault, your conventions. Settings live **in your vault** as `.brain/setting
 | **Todo tag** | Marks a real action inside a list | `todo` |
 | **Hide notes tagged** | Notes with these tags never show on Tasks | none |
 | **Hide from Recent** | Files that never show in Recently changed | none |
-| **Ask Claude prompt** | The prompt the Ask Claude button uses (`{path}` is the note) | a neutral prompt |
+| **Ask button opens** | Which AI the Ask button on a note opens: Claude, ChatGPT or Gemini | Claude |
+| **Ask prompt** | The prompt the Ask button sends (`{path}` is the note) | a neutral prompt |
 
 ## On this device
 

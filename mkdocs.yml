@@ -102,6 +102,7 @@ nav:
       - Tasks: features/tasks.md
       - Offline reading: features/offline.md
       - Diagrams and math: features/diagrams.md
+      - Slides: features/slides.md
       - Organizing: features/organize.md
       - Vault settings: features/settings.md
       - Usage stats: features/stats.md
