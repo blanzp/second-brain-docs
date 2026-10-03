@@ -1,6 +1,6 @@
 site_name: Second Brain
 site_description: Give every AI agent your notes and stay in control. A Markdown vault in your own GitHub repo, shared by Claude, ChatGPT and your agents, with a signed record of every change and a phone app to review it.
-site_url: https://blanzp.github.io/second-brain-docs/
+site_url: https://docs.mdcrypt.dev/
 repo_url: https://github.com/blanzp/second-brain-docs
 repo_name: second-brain-docs
 edit_uri: edit/main/docs/

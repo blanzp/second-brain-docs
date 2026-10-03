@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         Thanks for your interest in Second Brain! This repository is **public**, so only share what you're happy for anyone to see.
-        Before requesting, [create your vault](https://blanzp.github.io/second-brain-docs/get-started/vault/) and [install the GitHub App](https://blanzp.github.io/second-brain-docs/get-started/github-app/) on it.
+        Before requesting, [create your vault](https://docs.mdcrypt.dev/get-started/vault/) and [install the GitHub App](https://docs.mdcrypt.dev/get-started/github-app/) on it.
   - type: input
     id: username
     attributes:
