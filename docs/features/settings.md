@@ -16,6 +16,7 @@ Your vault, your conventions. Settings live **in your vault** as `.brain/setting
 | **Todo tag** | Marks a real action inside a list | `todo` |
 | **Hide notes tagged** | Notes with these tags never show on Tasks | none |
 | **Hide from Recent** | Files that never show in Recently changed | none |
+| **Slides** | Default theme, colours, page numbers and shape for [slide decks](slides.md) | Default theme, light, no numbers, 16:9 |
 | **Ask button opens** | Which AI the Ask button on a note opens: Claude, ChatGPT or Gemini | Claude |
 | **Ask prompt** | The prompt the Ask button sends (`{path}` is the note) | a neutral prompt |
 

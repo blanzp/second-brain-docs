@@ -46,6 +46,19 @@ Or just ask: *"Turn my notes on the Tuscany trip into a 6-slide deck in Unibrain
 - **Present:** one slide at a time, full screen. Swipe, tap the right or left side, or use the arrow keys. Tap any slide to start from it.
 - **PDF:** opens your device's print dialog with one slide per page; choose **Save as PDF**. On iPhone: Print, pinch the preview open, then Share → Save to Files.
 
+## Set your look once
+
+Under **⚙ Settings → Slides**, choose the defaults for every deck in your vault:
+
+| Setting | Choices |
+|---|---|
+| **Theme** | Default, **Unibrain** (the app's warm off-white and copper), Gaia, Uncover |
+| **Colours** | Light or Dark |
+| **Page numbers** | Off or On |
+| **Slide shape** | 16:9 (wide) or 4:3 |
+
+Change a setting and all your decks follow, with nothing to edit. A deck can still go its own way in its properties, for example `theme: gaia` or `paginate: false`.
+
 ## Everything works inside slides
 
 - `[[wiki links]]` and `#tags`
