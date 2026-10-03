@@ -37,7 +37,7 @@ Your agents do most of the writing, so the web app is built for **reading, revie
 
 ## Reading
 
-- Clean typography in light and dark mode.
+- Clean typography in **light and dark mode**: follow your device, or choose one under ⚙ Settings → Appearance (remembered per device).
 - **Rendered beautifully:** wiki links and embeds, callouts, highlights, footnotes, block links, [26 diagram types and math](diagrams.md), syntax-highlighted code.
 - **Contents** button for long notes, and **Linked from** listing the notes that link here.
 - **Tap any image or diagram** to view it full screen, with pinch to zoom.

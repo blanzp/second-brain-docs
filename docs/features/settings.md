@@ -18,6 +18,15 @@ Your vault, your conventions. Settings live **in your vault** as `.brain/setting
 | **Hide from Recent** | Files that never show in Recently changed | none |
 | **Ask Claude prompt** | The prompt the Ask Claude button uses (`{path}` is the note) | a neutral prompt |
 
+## On this device
+
+Some choices belong to the device rather than the vault, so your phone and your computer can differ:
+
+- **Appearance:** System, Light or Dark.
+- **Offline folders** and which Tasks sections you keep open.
+
+Settings also links to these docs and to your [usage stats](stats.md).
+
 ## Safe by design
 
 - **No file is fine:** defaults apply until you change something.
