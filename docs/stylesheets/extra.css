@@ -1,19 +1,70 @@
-/* Brand: warm copper, as in the web app */
-:root {
-  --md-primary-fg-color: #8f5a2f;
-  --md-primary-fg-color--light: #b0703c;
-  --md-primary-fg-color--dark: #6e4422;
+/* Brand: the web app's own palette. Warm off-white surfaces, dark ink, copper only for links and actions. */
+:root, [data-md-color-scheme="default"] {
+  --md-primary-fg-color: #fbf8f3;        /* header and tabs background */
+  --md-primary-fg-color--light: #ffffff;
+  --md-primary-fg-color--dark: #f1ece4;
+  --md-primary-bg-color: #1c1a17;        /* header text */
+  --md-primary-bg-color--light: #736c63;
   --md-accent-fg-color: #b0703c;
-  --md-typeset-a-color: #8f5a2f;
+  --md-accent-fg-color--transparent: rgb(176 112 60 / 0.1);
+  --md-default-bg-color: #fbf8f3;
+  --md-default-fg-color: #1c1a17;
+  --md-default-fg-color--light: #736c63;
+  --md-default-fg-color--lighter: #a39a8e;
+  --md-default-fg-color--lightest: #e6e0d6;
+  --md-code-bg-color: #f1ece4;
+  --md-typeset-a-color: #9a5e2f;
+  --md-typeset-mark-color: #f6e3a7;
+  --brand: #b0703c;
+  --brand-ink: #ffffff;
+  --surface: #ffffff;
 }
 [data-md-color-scheme="slate"] {
-  --md-primary-fg-color: #2a2621;
-  --md-primary-fg-color--light: #3a342d;
-  --md-primary-fg-color--dark: #1d1b19;
-  --md-accent-fg-color: #e09a62;
-  --md-typeset-a-color: #e5a873;
-  --md-default-bg-color: #161412;
+  --md-hue: 30;
+  --md-primary-fg-color: #141311;
+  --md-primary-fg-color--light: #1d1b19;
+  --md-primary-fg-color--dark: #0f0e0d;
+  --md-primary-bg-color: #efe7d9;
+  --md-primary-bg-color--light: #a39a8e;
+  --md-accent-fg-color: #d48d53;
+  --md-accent-fg-color--transparent: rgb(212 141 83 / 0.12);
+  --md-default-bg-color: #141311;
+  --md-default-fg-color: #efe7d9;
+  --md-default-fg-color--light: #a39a8e;
+  --md-default-fg-color--lighter: #6f675e;
+  --md-default-fg-color--lightest: #312e2a;
+  --md-code-bg-color: #24211e;
+  --md-typeset-color: #efe7d9;
+  --md-typeset-a-color: #e0a06b;
+  --md-typeset-mark-color: #5b4a1c;
+  --brand: #d48d53;
+  --brand-ink: #141311;
+  --surface: #1d1b19;
 }
+
+/* Header and tabs: quiet, with a hairline instead of a coloured bar */
+.md-header, .md-tabs { background-color: var(--md-default-bg-color); color: var(--md-default-fg-color); }
+.md-header { border-bottom: 1px solid var(--md-default-fg-color--lightest); box-shadow: none; }
+.md-header--shadow { box-shadow: 0 1px 0 var(--md-default-fg-color--lightest); }
+.md-tabs { border-bottom: 1px solid var(--md-default-fg-color--lightest); }
+.md-tabs__link { opacity: 0.7; }
+.md-tabs__item--active .md-tabs__link, .md-tabs__link:hover { color: var(--brand); opacity: 1; }
+.md-search__input { background-color: var(--md-default-fg-color--lightest); color: var(--md-default-fg-color); }
+.md-search__input::placeholder, .md-search__icon { color: var(--md-default-fg-color--light); }
+.md-nav__link--active, .md-nav__link:hover { color: var(--brand); }
+
+/* Buttons: copper with white text, like the app's primary button */
+.md-typeset .md-button { color: var(--brand); border-color: var(--brand); border-radius: 10px; }
+.md-typeset .md-button--primary { background-color: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+.md-typeset .md-button:hover, .md-typeset .md-button:focus { background-color: var(--brand); border-color: var(--brand); color: var(--brand-ink); }
+
+/* Cards and tables on white, like the app's lists */
+.md-typeset .grid.cards > ul > li, .md-typeset .grid > .card { background: var(--surface); border-color: var(--md-default-fg-color--lightest); }
+.md-typeset .grid.cards > ul > li:hover { border-color: var(--brand); box-shadow: 0 4px 16px rgb(0 0 0 / 0.06); }
+.md-typeset table:not([class]) { background: var(--surface); border-color: var(--md-default-fg-color--lightest); }
+.md-typeset .admonition, .md-typeset details { background: var(--surface); }
+.md-footer { background-color: var(--md-default-fg-color); }
+[data-md-color-scheme="slate"] .md-footer { background-color: #0f0e0d; }
 
 /* Home page hero */
 .hero { padding: 1.2rem 0 0.4rem; }
@@ -29,10 +80,14 @@
 .shots figcaption { font-size: 0.75rem; opacity: 0.75; text-align: center; margin-top: 0.4rem; }
 
 /* Compare table: tick and cross colors */
-.md-typeset .yes { color: #2e7d32; font-weight: 700; }
+.md-typeset .yes { color: #4f7a35; font-weight: 700; }
+[data-md-color-scheme="slate"] .md-typeset .yes { color: #a7b777; }
 .md-typeset .no { opacity: 0.55; }
 .md-typeset .grid.cards > ul > li, .md-typeset .grid > .card { border-radius: 12px; }
 
 /* Two-column card grid (home page) */
 .md-typeset .grid.two { grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
 .md-header__button.md-logo img { border-radius: 6px; }
+
+/* Page titles at full strength */
+.md-typeset h1 { color: var(--md-default-fg-color); font-weight: 700; }
