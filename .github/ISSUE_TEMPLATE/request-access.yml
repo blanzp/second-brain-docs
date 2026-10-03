@@ -1,0 +1,37 @@
+name: Request access
+description: Ask to join the Second Brain early access
+title: "Access request: <your GitHub username>"
+labels: ["access request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in Second Brain! This repository is **public**, so only share what you're happy for anyone to see.
+        Before requesting, [create your vault](https://blanzp.github.io/second-brain-docs/get-started/vault/) and [install the GitHub App](https://blanzp.github.io/second-brain-docs/get-started/github-app/) on it.
+  - type: input
+    id: username
+    attributes:
+      label: GitHub username
+      placeholder: alice
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Vault repository
+      description: owner/name of the private repo you installed the app on
+      placeholder: alice/second-brain
+    validations:
+      required: true
+  - type: checkboxes
+    id: ready
+    attributes:
+      label: Ready to go
+      options:
+        - label: I installed the Second Brain MCP MDCrypt GitHub App on this repo
+          required: true
+  - type: textarea
+    id: about
+    attributes:
+      label: What will you use it for? (optional)
+      description: Which AI apps you use and what you'd like your second brain to do.
