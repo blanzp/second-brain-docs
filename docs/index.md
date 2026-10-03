@@ -1,5 +1,5 @@
 ---
-title: Second Brain
+title: Notes you own, agents you can trust
 hide:
   - navigation
   - toc
