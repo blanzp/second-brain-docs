@@ -4,7 +4,7 @@ title: The web app
 
 # The web app
 
-Your agents do most of the writing, so the web app is built for **reading, reviewing and quick fixes**, on the phone first. Open **[brain.mdcrypt.dev/app](https://brain.mdcrypt.dev/app/)** and add it to your home screen.
+Your agents do most of the writing, so the web app is built for **reading, reviewing and quick fixes**, on the phone first. Open **[mdcrypt.dev](https://mdcrypt.dev)** and add it to your home screen.
 
 <div class="shots" markdown>
 <figure markdown>

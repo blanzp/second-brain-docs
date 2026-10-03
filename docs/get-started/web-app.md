@@ -4,7 +4,7 @@ title: 4. Open the web app
 
 # 4. Open the web app
 
-Open **[brain.mdcrypt.dev/app](https://brain.mdcrypt.dev/app/)** and sign in with GitHub. That's it: your vault is ready to search, read and edit from any browser.
+Open **[mdcrypt.dev](https://mdcrypt.dev)** and sign in with GitHub. That's it: your vault is ready to search, read and edit from any browser.
 
 ## Add it to your home screen
 
