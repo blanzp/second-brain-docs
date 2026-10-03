@@ -8,7 +8,7 @@ Write todos where they belong, in the note about the project, the trip or the ho
 
 ## Todos, not lists
 
-Checkboxes mean two things, and Second Brain keeps them apart:
+Checkboxes mean two things, and Unibrain keeps them apart:
 
 - **Todos** are things to do. Any `- [ ]` in an ordinary note is a todo.
 - **Lists** are sights to see, things to pack, steps in a plan. Tag the note as a list (for example `#itinerary` or `#checklist`) and its checkboxes stay off the Tasks page.

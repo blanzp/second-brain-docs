@@ -8,7 +8,7 @@ Your vault, your conventions. Settings live **in your vault** as `.brain/setting
 
 | Setting | What it does | Default |
 |---|---|---|
-| **Title** | The app's name in the header and tab, e.g. "My brain" | Second Brain |
+| **Title** | The app's name in the header and tab, e.g. "My brain" | Unibrain |
 | **New notes go in** | Where notes go when no folder is given | Top level |
 | **Time zone** | Dates in notes and the daily note | Taken from your device on first sign-in |
 | **Archive folder** | Where archived notes go | `Archives` |

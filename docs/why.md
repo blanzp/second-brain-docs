@@ -1,8 +1,8 @@
 ---
-title: Why Second Brain
+title: Why Unibrain
 ---
 
-# Why Second Brain
+# Why Unibrain
 
 ## AI agents are becoming coworkers. They need a shared memory.
 
@@ -10,7 +10,7 @@ Most people now use more than one AI. Claude for writing and research, ChatGPT f
 
 The built-in memory in each app only helps that app. Copying notes between them by hand doesn't scale. And letting several agents write into one place raises a new question: **what did they change, and can I trust it?**
 
-Second Brain is the answer to both:
+Unibrain is the answer to both:
 
 - **One memory for all of them.** Every agent reads and writes the same vault through the open [Model Context Protocol](https://modelcontextprotocol.io) (MCP).
 - **Accountability for every write.** Every change is a Git commit that says which app and which named agent made it. You can see it, review it and undo it.
@@ -40,7 +40,7 @@ Agents do most of the writing, so you mostly read. The web app is built for that
 
 The landscape moves quickly. This is our honest reading as of October 2026; check each product for its latest features.
 
-| | **Second Brain** | Basic Memory | Obsidian | Notion | Built-in AI memory |
+| | **Unibrain** | Basic Memory | Obsidian | Notion | Built-in AI memory |
 |---|---|---|---|---|---|
 | Plain Markdown files you own | <span class="yes">Yes</span> | <span class="yes">Yes</span> | <span class="yes">Yes</span> | <span class="no">No</span> | <span class="no">No</span> |
 | Lives in your own Git repo, with history | <span class="yes">Yes, built in</span> | Optional | With a plugin | <span class="no">No</span> | <span class="no">No</span> |
@@ -51,13 +51,13 @@ The landscape moves quickly. This is our honest reading as of October 2026; chec
 | 26 diagram types and math | <span class="yes">Yes</span> | Not checked | Mermaid, plugins | Mermaid | n/a |
 | Teams and shared workspaces | Not yet | <span class="yes">Yes</span> | Shared vaults | <span class="yes">Yes</span> | n/a |
 
-**Where Second Brain shines:** people who let several agents write to their notes and want to stay in control, and anyone who wants their knowledge base to be a plain Git repo rather than someone else's database.
+**Where Unibrain shines:** people who let several agents write to their notes and want to stay in control, and anyone who wants their knowledge base to be a plain Git repo rather than someone else's database.
 
-**Where others are ahead today:** team workspaces and collaboration (Notion, Basic Memory), deep desktop editing and plugins (Obsidian), and semantic search (Basic Memory). See [What's new](reference/whats-new.md) for where Second Brain is heading.
+**Where others are ahead today:** team workspaces and collaboration (Notion, Basic Memory), deep desktop editing and plugins (Obsidian), and semantic search (Basic Memory). See [What's new](reference/whats-new.md) for where Unibrain is heading.
 
 ### Works with Obsidian, doesn't replace it
 
-Second Brain follows Obsidian's Markdown conventions: `[[wiki links]]`, `#tags`, callouts, embeds, block links and task due dates. An existing Obsidian vault in GitHub works as-is, and you can keep editing it in Obsidian on your desktop while your agents and phone use Second Brain.
+Unibrain follows Obsidian's Markdown conventions: `[[wiki links]]`, `#tags`, callouts, embeds, block links and task due dates. An existing Obsidian vault in GitHub works as-is, and you can keep editing it in Obsidian on your desktop while your agents and phone use Unibrain.
 
 ## Who it's for
 

@@ -4,7 +4,7 @@ title: 1. Create your vault
 
 # 1. Create your vault
 
-Your **vault** is a private GitHub repository of Markdown notes. It belongs to you, and Second Brain only ever works inside it.
+Your **vault** is a private GitHub repository of Markdown notes. It belongs to you, and Unibrain only ever works inside it.
 
 ## Create the repository
 
@@ -19,7 +19,7 @@ Your **vault** is a private GitHub repository of Markdown notes. It belongs to y
 
 ## Recommended: tell your AI what the vault is for
 
-Add a file called **`AGENTS.md`** at the top of the repo (on GitHub: **Add file → Create new file**). Second Brain sends it to every AI app each time it connects, so all of them follow the same rules: where notes go, how you like them written, what never to store.
+Add a file called **`AGENTS.md`** at the top of the repo (on GitHub: **Add file → Create new file**). Unibrain sends it to every AI app each time it connects, so all of them follow the same rules: where notes go, how you like them written, what never to store.
 
 Edit it whenever you like; changes apply within a minute. Here's a starting point:
 

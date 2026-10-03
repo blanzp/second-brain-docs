@@ -4,7 +4,7 @@ title: Trust and safety
 
 # Trust and safety
 
-Letting AI write to your notes is only comfortable when you can see what it did and undo it. That's the heart of Second Brain.
+Letting AI write to your notes is only comfortable when you can see what it did and undo it. That's the heart of Unibrain.
 
 ## A signed record of every change
 
@@ -27,7 +27,7 @@ claude-code-gardener          organize: archive Projects/old-idea.md (claude-cod
 
 ## A safety net that watches every commit
 
-Second Brain inspects each new commit as it arrives, including ones pushed from outside (a laptop, a phone, an agent with its own clone), and **flags** two kinds of trouble:
+Unibrain inspects each new commit as it arrives, including ones pushed from outside (a laptop, a phone, an agent with its own clone), and **flags** two kinds of trouble:
 
 - **Rollbacks:** notes reverted to an older version, the classic sign of a stale copy being pushed from another device.
 - **Deletions:** notes removed outright.

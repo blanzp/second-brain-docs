@@ -11,7 +11,7 @@ Every write is already labelled with the app that made it. But if you run severa
 Add one line to the project's or agent's instructions:
 
 ```text
-Your name is Igor. Sign your second-brain writes: pass agent: "Igor" on every tool that writes.
+Your name is Igor. Sign your Unibrain writes: pass agent: "Igor" on every tool that writes.
 ```
 
 Start a new chat so the assistant picks it up. From then on:

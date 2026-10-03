@@ -17,7 +17,7 @@ Your notes are yours. Here's exactly how they're handled.
 |---|---|
 | **You**, signed in with GitHub | Yes |
 | **AI apps you connected** | Yes, through the tools, while connected |
-| **Other Second Brain users** | **No.** Every request is tied to your GitHub sign-in and can only reach your own repo. A link to one of your notes shows *their* vault, not yours. |
+| **Other Unibrain users** | **No.** Every request is tied to your GitHub sign-in and can only reach your own repo. A link to one of your notes shows *their* vault, not yours. |
 | **The server's operator** | Technically yes: they run the machine that holds the working copy. Only use a server whose operator you trust, or run your own. |
 | **GitHub** | Under [GitHub's terms](https://docs.github.com/en/site-policy/github-terms/github-terms-of-service) for private repositories. |
 

@@ -10,15 +10,15 @@ Works in the **Claude desktop app**, **claude.ai** and the **iPhone and Android 
 
 1. Open **Settings → Connectors** (on some versions, **Customize → Connectors**).
 2. Click **Add custom connector**.
-3. **Name:** `Second Brain`. **URL:** `https://brain.mdcrypt.dev/mcp`. Leave the advanced OAuth fields empty.
+3. **Name:** `Unibrain`. **URL:** `https://unibrain.dev/mcp`. Leave the advanced OAuth fields empty.
 4. Click **Add**, then **Connect**, and sign in with GitHub when asked.
-5. In a chat, open the **+** menu (or the tools menu) → **Connectors** and make sure **Second Brain** is on.
+5. In a chat, open the **+** menu (or the tools menu) → **Connectors** and make sure **Unibrain** is on.
 
 ## Use it
 
 Just ask. Claude reads your `AGENTS.md` first, then searches, reads and writes as needed:
 
-> Research the best options for backing up a home server, compare three of them, and save the comparison to my second brain under Projects/homelab.
+> Research the best options for backing up a home server, compare three of them, and save the comparison to Unibrain under Projects/homelab.
 
 > What did I decide about the kitchen renovation? Check my notes.
 
@@ -27,7 +27,7 @@ Just ask. Claude reads your `AGENTS.md` first, then searches, reads and writes a
 A **Claude Project** with its own instructions makes a great specialist: a research assistant, a brainstorming partner, a travel planner. Give each one a name and ask it to sign its writes:
 
 ```text
-You are Igor, my research librarian. Sign your second-brain writes:
+You are Igor, my research librarian. Sign your Unibrain writes:
 pass agent: "Igor" on every tool that writes.
 ```
 

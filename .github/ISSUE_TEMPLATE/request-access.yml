@@ -1,13 +1,13 @@
 name: Request access
-description: Ask to join the Second Brain early access
+description: Ask to join the Unibrain early access
 title: "Access request: <your GitHub username>"
 labels: ["access request"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for your interest in Second Brain! This repository is **public**, so only share what you're happy for anyone to see.
-        Before requesting, [create your vault](https://docs.mdcrypt.dev/get-started/vault/) and [install the GitHub App](https://docs.mdcrypt.dev/get-started/github-app/) on it.
+        Thanks for your interest in Unibrain! This repository is **public**, so only share what you're happy for anyone to see.
+        Before requesting, [create your vault](https://docs.unibrain.dev/get-started/vault/) and [install the GitHub App](https://docs.unibrain.dev/get-started/github-app/) on it.
   - type: input
     id: username
     attributes:
@@ -28,10 +28,10 @@ body:
     attributes:
       label: Ready to go
       options:
-        - label: I installed the Second Brain MCP MDCrypt GitHub App on this repo
+        - label: I installed the Uni Brain MCP GitHub App on this repo
           required: true
   - type: textarea
     id: about
     attributes:
       label: What will you use it for? (optional)
-      description: Which AI apps you use and what you'd like your second brain to do.
+      description: Which AI apps you use and what you'd like Unibrain to do.

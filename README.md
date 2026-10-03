@@ -1,10 +1,10 @@
-# Second Brain documentation
+# Unibrain documentation
 
-The user documentation for **Second Brain**: one Markdown knowledge base, in your own GitHub repo, shared by Claude, ChatGPT and your agents, with a signed record of every change.
+The user documentation for **Unibrain**: one Markdown knowledge base, in your own GitHub repo, shared by Claude, ChatGPT and your agents, with a signed record of every change.
 
-**Read it at https://docs.mdcrypt.dev/**
+**Read it at https://docs.unibrain.dev/**
 
-Want to try Second Brain? [Request access](https://github.com/blanzp/second-brain-docs/issues/new?template=request-access.yml).
+Want to try Unibrain? [Request access](https://github.com/blanzp/second-brain-docs/issues/new?template=request-access.yml).
 
 ## Working on the docs
 

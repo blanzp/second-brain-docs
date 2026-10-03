@@ -14,11 +14,11 @@ Setup takes about **20 minutes**, and you only do it once.
 
 -   :material-numeric-2-circle:{ .lg .middle } __[Install the GitHub App](github-app.md)__
 
-    Give Second Brain access to that one repo, and nothing else. *2 minutes.*
+    Give Unibrain access to that one repo, and nothing else. *2 minutes.*
 
 -   :material-numeric-3-circle:{ .lg .middle } __[Request access](access.md)__
 
-    Second Brain is invite-only during early access. *2 minutes, then a short wait.*
+    Unibrain is invite-only during early access. *2 minutes, then a short wait.*
 
 -   :material-numeric-4-circle:{ .lg .middle } __[Open the web app](web-app.md)__
 
@@ -38,4 +38,4 @@ Setup takes about **20 minutes**, and you only do it once.
 That's it. There's nothing to install on your computer.
 
 !!! tip "Already have notes in GitHub?"
-    If you keep an Obsidian vault or a folder of Markdown notes in a GitHub repo, use that repo. Second Brain works with it as it is.
+    If you keep an Obsidian vault or a folder of Markdown notes in a GitHub repo, use that repo. Unibrain works with it as it is.

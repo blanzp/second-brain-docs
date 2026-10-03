@@ -4,7 +4,7 @@ title: 3. Request access
 
 # 3. Request access
 
-Second Brain is in **invite-only early access**, so each new user is added by hand. It only needs two things from you:
+Unibrain is in **invite-only early access**, so each new user is added by hand. It only needs two things from you:
 
 - your **GitHub username**, for example `alice`;
 - your **vault repo**, for example `alice/second-brain`.

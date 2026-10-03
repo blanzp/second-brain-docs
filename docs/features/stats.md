@@ -4,7 +4,7 @@ title: Usage stats
 
 # Usage stats
 
-See how you and your agents use your second brain. Open **⚙ Settings → Usage stats**.
+See how you and your agents use Unibrain. Open **⚙ Settings → Usage stats**.
 
 ## Your activity
 

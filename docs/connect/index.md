@@ -7,10 +7,10 @@ title: Connect your AI
 Every app connects to the same address:
 
 ```
-https://brain.mdcrypt.dev/mcp
+https://unibrain.dev/mcp
 ```
 
-The first time an app connects, you're sent to GitHub to **authorize "Second Brain MCP MDCrypt"**, then straight back. You sign in with GitHub; there's no separate password, and nothing to install.
+The first time an app connects, you're sent to GitHub to **authorize "Uni Brain MCP"**, then straight back. You sign in with GitHub; there's no separate password, and nothing to install.
 
 <div class="grid cards" markdown>
 
@@ -38,8 +38,8 @@ The first time an app connects, you're sent to GitHub to **authorize "Second Bra
 
 ## After connecting, try
 
-- *"What's in my second brain about* topic*?"*
-- *"Research* topic *and save a summary to my second brain, with sources."*
+- *"What's in Unibrain about* topic*?"*
+- *"Research* topic *and save a summary to Unibrain, with sources."*
 - *"Add to today's daily note: called the plumber, quote is $400."*
 - *"What changed in my vault this week, and who changed it?"*
 - *"List my open tasks in Projects."*

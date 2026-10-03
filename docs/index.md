@@ -9,10 +9,10 @@ hide:
 
 # Give every AI agent your notes. Stay in control.
 
-<p class="lead">Second Brain is one knowledge base shared by Claude, ChatGPT and your own agents. It's plain Markdown in <strong>your own GitHub repo</strong>, with a <strong>signed record of every change</strong> and a fast phone app for reading and reviewing what your agents wrote.</p>
+<p class="lead">Unibrain is one knowledge base shared by Claude, ChatGPT and your own agents. It's plain Markdown in <strong>your own GitHub repo</strong>, with a <strong>signed record of every change</strong> and a fast phone app for reading and reviewing what your agents wrote.</p>
 
 [Get started :material-arrow-right:](get-started/index.md){ .md-button .md-button--primary }
-[Why Second Brain](why.md){ .md-button }
+[Why Unibrain](why.md){ .md-button }
 
 </div>
 
@@ -22,7 +22,7 @@ hide:
 
 Every assistant you use keeps its own memory, locked inside its own app. Research you did with Claude isn't there when you ask ChatGPT. The agent running on your server can't see the plan you made on your phone.
 
-Second Brain gives them **one shared memory you own**. Ask any of them to *"research this and save it to my second brain"*, and every other agent, and you, can find it later.
+Unibrain gives them **one shared memory you own**. Ask any of them to *"research this and save it to Unibrain"*, and every other agent, and you, can find it later.
 
 <div class="grid cards two" markdown>
 
@@ -73,8 +73,8 @@ flowchart LR
 ```
 
 1. **Create a private GitHub repo** for your notes, or use one you already have.
-2. **Install the Second Brain GitHub App** on that one repo.
-3. **Connect your AI apps** with a single address: `https://brain.mdcrypt.dev/mcp`.
+2. **Install the Unibrain GitHub App** on that one repo.
+3. **Connect your AI apps** with a single address: `https://unibrain.dev/mcp`.
 4. **Ask away.** Your agents search, read, write and organize. You read and review in the web app.
 
 ## What people use it for
@@ -82,7 +82,7 @@ flowchart LR
 <div class="grid" markdown>
 
 !!! example "Research that sticks"
-    *"Research Kafka tiered storage options and save a comparison to my second brain, with sources."* Next month, ask ChatGPT about it and it finds Claude's notes.
+    *"Research Kafka tiered storage options and save a comparison to Unibrain, with sources."* Next month, ask ChatGPT about it and it finds Claude's notes.
 
 !!! example "Plan a trip together"
     Claude drafts the itinerary, ChatGPT finds restaurants, and you tick off bookings on your phone in Italy, offline.
@@ -99,7 +99,7 @@ flowchart LR
 
 ## Built for people who let AI write
 
-| | Second Brain |
+| | Unibrain |
 |---|---|
 | **Where your notes live** | Your own private GitHub repo, as plain Markdown |
 | **Who can write** | Any MCP-capable AI app or agent, plus you |
@@ -109,4 +109,4 @@ flowchart LR
 | **Lock-in** | None. It's your repo |
 
 !!! tip "Early access"
-    Second Brain is in **invite-only early access**. [Request access](get-started/access.md) and you'll be set up in about 20 minutes.
+    Unibrain is in **invite-only early access**. [Request access](get-started/access.md) and you'll be set up in about 20 minutes.

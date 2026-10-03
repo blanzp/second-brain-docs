@@ -10,7 +10,7 @@ Real ways to put a shared, accountable memory to work. Every prompt below works 
 
 Research is wasted when it disappears into a chat history. Save it once and every assistant can build on it.
 
-> Research Kafka tiered storage: how it works, the main options, and the trade-offs. Save it to my second brain under tech/kafka with sources and a comparison table.
+> Research Kafka tiered storage: how it works, the main options, and the trade-offs. Save it to Unibrain under tech/kafka with sources and a comparison table.
 
 Next month, from a different app:
 
@@ -68,7 +68,7 @@ Every change shows who made it: `Igor (claude)`, `claude-code-gardener`, or what
 
 ## Brainstorm, then keep the good parts
 
-> Let's brainstorm names for the new product. When we're done, save the shortlist and the reasons to my second brain and link it from the project hub.
+> Let's brainstorm names for the new product. When we're done, save the shortlist and the reasons to Unibrain and link it from the project hub.
 
 Agents link related notes with `[[wiki links]]` (only to notes that exist), so ideas don't end up as orphans.
 
@@ -78,7 +78,7 @@ Ask for a picture instead of a wall of text:
 
 > Draw the sign-in flow as a sequence diagram in the Architecture note.
 
-Second Brain draws **26 diagram types**: Mermaid, PlantUML, C4, Graphviz, D2, Structurizr, Vega-Lite charts, network and rack diagrams, wiring harnesses and more. See [Diagrams and math](features/diagrams.md).
+Unibrain draws **26 diagram types**: Mermaid, PlantUML, C4, Graphviz, D2, Structurizr, Vega-Lite charts, network and rack diagrams, wiring harnesses and more. See [Diagrams and math](features/diagrams.md).
 
 ## Keep your knowledge healthy
 

@@ -4,7 +4,7 @@ title: Agents and MCP
 
 # Agents and MCP
 
-Second Brain is a **remote MCP server**. Any AI app that supports the Model Context Protocol connects with one address and a GitHub sign-in, and gets a full toolkit for your vault.
+Unibrain is a **remote MCP server**. Any AI app that supports the Model Context Protocol connects with one address and a GitHub sign-in, and gets a full toolkit for your vault.
 
 ## What agents can do
 
@@ -21,7 +21,7 @@ Full details: [MCP tools](../reference/tools.md).
 
 ## Rules that travel with your vault
 
-When an agent connects, Second Brain hands it a **vault guide**:
+When an agent connects, Unibrain hands it a **vault guide**:
 
 1. **How the server works:** it handles Git, every write is a commit, prefer adding to rewriting, never recreate a note to move it.
 2. **Your `AGENTS.md`:** what the vault is for, where things go, your rules. You write it once, in your repo; every agent follows it.
@@ -32,7 +32,7 @@ Change `AGENTS.md` and every agent picks it up within a minute, with no redeploy
 
 ## Every agent, labelled
 
-- Each app registers a name when it connects (`claude`, `chatgpt`, `claude-code-second-brain`…), and every commit it makes carries that name.
+- Each app registers a name when it connects (`claude`, `chatgpt`, `claude-code-unibrain`…), and every commit it makes carries that name.
 - **Named agents sign their writes.** Personas sharing one app, like two Claude Projects, pass their own name, and their changes show as `Igor (claude)` or `Brainstorm Partner (claude)`. The note's `source` says "by Igor" too. See [Name your agents](../guides/named-agents.md).
 - Ask any agent *"what changed this week, and who changed it?"* and it reads the history.
 

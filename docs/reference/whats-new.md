@@ -12,11 +12,11 @@ title: What's new
 - **Phone app:** bottom tab bar, pull to refresh, back keeps your place, full-screen zoom for images and diagrams, Contents and *Linked from* for long notes, search words highlighted, Organize (rename, move, retag).
 - **Offline:** an Offline tab showing everything saved, browsing any folder offline, and saved copies on slow connections.
 - **Vault settings:** your conventions in your vault, edited in Settings, followed by every agent. Your own app title.
-- **Instant sync:** changes made outside Second Brain arrive in about a second through GitHub webhooks.
+- **Instant sync:** changes made outside Unibrain arrive in about a second through GitHub webhooks.
 
 ## September 2026
 
-- **Second Brain launches:** the MCP server with 28 tools, multi-user sign-in through GitHub, the safety net, and the phone-first web app with diagrams, math, offline reading and a Tasks page.
+- **Unibrain launches:** the MCP server with 28 tools, multi-user sign-in through GitHub, the safety net, and the phone-first web app with diagrams, math, offline reading and a Tasks page.
 
 ## Ideas we're exploring
 

@@ -5,7 +5,7 @@ title: FAQ
 # FAQ
 
 ??? question "Do I need Obsidian?"
-    No. The web app covers reading, editing, tasks and offline reading. But Second Brain follows Obsidian's conventions, so you can keep using Obsidian on the same repo if you like.
+    No. The web app covers reading, editing, tasks and offline reading. But Unibrain follows Obsidian's conventions, so you can keep using Obsidian on the same repo if you like.
 
 ??? question "Can I use a repo I already have?"
     Yes. Any repo of Markdown notes works, including an existing Obsidian vault. Install the GitHub App on it and request access with that repo.
@@ -23,7 +23,7 @@ title: FAQ
     Writes are queued per vault and each one is applied on top of the latest version, so neither overwrites the other.
 
 ??? question "I edit notes on my laptop with Git too. Is that OK?"
-    Yes. Second Brain notices your pushes within about a second through GitHub webhooks. Pull before you edit, and push soon after, as with any shared repo.
+    Yes. Unibrain notices your pushes within about a second through GitHub webhooks. Pull before you edit, and push soon after, as with any shared repo.
 
 ??? question "Can I share a vault with someone?"
     Not yet: each vault belongs to one user. Shared vaults are being considered.
@@ -32,7 +32,7 @@ title: FAQ
     Reading does: notes you've opened, and whole folders you keep offline. Editing needs a connection. See [Offline reading](../features/offline.md).
 
 ??? question "How much does it cost?"
-    Second Brain is in invite-only early access. Pricing hasn't been set.
+    Unibrain is in invite-only early access. Pricing hasn't been set.
 
 ??? question "Is it open source?"
     Not at the moment.

@@ -4,7 +4,7 @@ title: Run a team of agents
 
 # Run a team of agents
 
-Second Brain is built for several agents writing to one vault, safely. Here's a setup that works well.
+Unibrain is built for several agents writing to one vault, safely. Here's a setup that works well.
 
 ## 1. Give each agent a job and a name
 

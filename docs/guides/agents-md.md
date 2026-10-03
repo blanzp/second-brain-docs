@@ -4,7 +4,7 @@ title: Write your AGENTS.md
 
 # Write your AGENTS.md
 
-`AGENTS.md` at the top of your vault is the single place you tell **every** AI how to behave in your notes. Second Brain sends it to each app when it connects, so Claude, ChatGPT, Claude Code and Hermes all follow the same rules.
+`AGENTS.md` at the top of your vault is the single place you tell **every** AI how to behave in your notes. Unibrain sends it to each app when it connects, so Claude, ChatGPT, Claude Code and Hermes all follow the same rules.
 
 ## What to put in it
 
