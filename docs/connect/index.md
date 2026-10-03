@@ -14,11 +14,11 @@ The first time an app connects, you're sent to GitHub to **authorize "Uni Brain 
 
 <div class="grid cards" markdown>
 
--   :simple-anthropic:{ .lg .middle } __[Claude](claude.md)__
+-   :simple-claude:{ .lg .middle } __[Claude](claude.md)__
 
     Desktop app, claude.ai and the iPhone and Android apps. One setup covers them all.
 
--   :simple-openai:{ .lg .middle } __[ChatGPT](chatgpt.md)__
+-   :material-chat-processing-outline:{ .lg .middle } __[ChatGPT](chatgpt.md)__
 
     Web, with a paid plan, through Developer mode. Works with deep research too.
 
