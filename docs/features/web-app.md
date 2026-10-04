@@ -4,7 +4,7 @@ title: The web app
 
 # The web app
 
-Your agents do most of the writing, so the web app is built for **reading, reviewing and quick fixes**, on the phone first. Open **[unibrain.dev](https://unibrain.dev)** and add it to your home screen.
+Your agents do much of the writing, so the web app is built for **reading and reviewing** first, with a proper editor for when you write yourself. It is designed for the phone. Open **[unibrain.dev](https://unibrain.dev)** and add it to your home screen.
 
 <div class="shots" markdown>
 <figure markdown>
@@ -42,12 +42,32 @@ Your agents do most of the writing, so the web app is built for **reading, revie
 - **Contents** button for long notes, and **Linked from** listing the notes that link here.
 - **Tap any image or diagram** to view it full screen, with pinch to zoom.
 - **Tick checkboxes** right in the note.
+- Tap a link to a note that **doesn't exist yet** to create it.
 - **Ask** opens a chat about the note in the AI you chose in Settings: Claude, ChatGPT or Gemini. **Share** sends the `.md` file through your phone's share sheet.
 - Notes marked as [slides](slides.md) open as a deck you can present or save as a PDF.
 
+## History
+
+Every change to a note is kept. Tap **History** on a note to see what changed.
+
+<div class="shots" markdown>
+<figure markdown>
+![The History page: removed lines in red, added lines in green, with the changed words marked](../assets/images/shot-history.png)
+<figcaption>What changed, and who changed it</figcaption>
+</figure>
+</div>
+
+- **Pick a set of changes** from the list, each with its date and who made it. You see everything that changed from that point to now.
+- **Added lines are green, removed lines red.** In a line that was edited, the changed words are marked.
+- Long unchanged stretches are **folded**; tap one to open it.
+- Saves made close together by the same person or agent are **one entry**, so an editing session doesn't fill the list.
+- History follows a note through **renames and moves**.
+
+It is the quickest way to check what an agent did to a note. History shows the differences; it doesn't restore an old version.
+
 ## Writing and organizing
 
-- A plain-text editor with a formatting toolbar and live preview. It **saves 3 seconds after you pause** and never overwrites changes made elsewhere.
+- An editor that shows the note **formatted as you type**, with a toolbar that sits on the keyboard, note and tag suggestions, a properties form and photos from your phone. It saves by itself and never overwrites changes made elsewhere. See [Writing](editor.md).
 - **New note** in any folder, or in a new subfolder.
 - **Organize:** rename, move and retag in one step, with links updated everywhere.
 - **Archive** with **Undo**, and **Unarchive** to restore.

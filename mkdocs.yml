@@ -99,6 +99,7 @@ nav:
       - Agents and MCP: features/agents.md
       - Trust and safety: features/safety.md
       - The web app: features/web-app.md
+      - Writing: features/editor.md
       - Tasks: features/tasks.md
       - Offline reading: features/offline.md
       - Diagrams and math: features/diagrams.md
