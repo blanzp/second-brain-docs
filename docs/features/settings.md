@@ -21,7 +21,7 @@ Your vault, your conventions. Settings live **in your vault** as `.brain/setting
 | **Archive folder** | Where archived notes go | `Archives` |
 | **Not todos** | Notes with these tags hold lists or reports, not todos: their checkboxes stay off Tasks | none |
 | **Todo tag** | Marks a real action inside one of those notes, which still shows on Tasks | `todo` |
-| **Hide from Recent** | Files that never show in Recently changed | none |
+| **Hide from Recent** | Notes that never show in Recently changed: a file name, a full path, or a folder | none |
 | **Slides** | Default theme, colours, page numbers and shape for [slide decks](slides.md) | Default theme, light, no numbers, 16:9 |
 | **Ask button opens** | Which AI the Ask button on a note opens: Claude, ChatGPT or Gemini | Claude |
 | **Ask prompt** | The prompt the Ask button sends (`{path}` is the note) | a neutral prompt |
