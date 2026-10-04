@@ -15,6 +15,9 @@ The request is a GitHub issue in this documentation's repo, which is **public**:
 
 You'll hear back on the issue when you're added. It takes effect immediately; no restart, no waiting.
 
+!!! tip "Get notified about updates and outages"
+    Subscribe to the [service announcements issue](https://github.com/blanzp/second-brain-docs/issues/1) to hear about major updates, outages, maintenance and important changes. Notices come through your GitHub account, so no email address is collected.
+
 !!! question "Why invite-only?"
     Early access keeps the group small enough to give everyone a great experience and to hear what you need next.
 
