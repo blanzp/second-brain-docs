@@ -34,7 +34,7 @@ A scheduled agent keeps the vault clean without ever surprising you:
 2. **You tick** the proposals you like, on your phone.
 3. **Its next run applies only the ticked ones**, signs every change, and carries the rest forward.
 
-Tag its reports (for example `#gardener`) and hide that tag from Tasks in [Vault settings](../features/settings.md), so its proposals don't clutter your todo list.
+Tag its reports (for example `#gardener`) and add that tag under **Not todos** in [Vault settings](../features/settings.md), so its proposals don't clutter your todo list.
 
 ## 4. Review on your phone
 
