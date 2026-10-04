@@ -1,0 +1,14 @@
+{
+  "name": "unibrain-docs-screenshots",
+  "private": true,
+  "type": "module",
+  "description": "Takes the documentation's screenshots and animations from a made-up demo vault",
+  "scripts": {
+    "server": "tsx demo-server.mts",
+    "shots": "node shots.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.0.0",
+    "tsx": "^4.20.0"
+  }
+}

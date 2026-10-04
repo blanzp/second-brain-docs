@@ -32,9 +32,9 @@ Your notes are ordinary Markdown files in a **private GitHub repo that belongs t
 - A **safety net** watches every new commit and flags anything that rolls notes back to an older version or deletes notes, such as a stale copy pushed from another device.
 - Moves and renames **rewrite every link** across the vault, so reorganizing never breaks anything.
 
-### 3. Reading and reviewing is a pleasure
+### 3. Reading and writing are a pleasure
 
-Agents do most of the writing, so you mostly read. The web app is built for that: fast search, beautiful rendering of diagrams, math and callouts, a Tasks page that pulls every todo out of your notes, and whole folders kept offline for a flight.
+Your agents write, and so do you. The web app is built for both: fast search, beautiful rendering of diagrams, math and callouts, an editor that formats your note as you type, a history that shows exactly what an agent changed, a Tasks page that pulls every todo out of your notes, and whole folders kept offline for a flight.
 
 ## How it compares
 

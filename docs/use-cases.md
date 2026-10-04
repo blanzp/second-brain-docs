@@ -6,6 +6,13 @@ title: Use cases
 
 Real ways to put a shared, accountable memory to work. Every prompt below works in Claude, ChatGPT or any connected agent.
 
+<div class="shots" markdown>
+<figure markdown>
+![An agent saves a note and it appears on the phone a moment later](assets/images/agent-writes.gif)
+<figcaption>Ask an agent to save something, and it is on your phone</figcaption>
+</figure>
+</div>
+
 ## Research that sticks
 
 Research is wasted when it disappears into a chat history. Save it once and every assistant can build on it.

@@ -9,11 +9,26 @@ hide:
 
 # Give every AI agent your notes. Stay in control.
 
-<p class="lead">Unibrain is one knowledge base shared by Claude, ChatGPT and your own agents. It's plain Markdown in <strong>your own GitHub repo</strong>, with a <strong>signed record of every change</strong> and a fast phone app for reading and reviewing what your agents wrote.</p>
+<p class="lead">Unibrain is one knowledge base shared by Claude, ChatGPT and your own agents. It's plain Markdown in <strong>your own GitHub repo</strong>, with a <strong>signed record of every change</strong> and a phone app where you read, review and write alongside them.</p>
 
 [Get started :material-arrow-right:](get-started/index.md){ .md-button .md-button--primary }
 [Why Unibrain](why.md){ .md-button }
 
+</div>
+
+<div class="shots" markdown>
+<figure markdown>
+![An agent saves a note and it appears on the phone a moment later](assets/images/agent-writes.gif)
+<figcaption>An agent writes; you see it at once</figcaption>
+</figure>
+<figure markdown>
+![Typing in the editor: the note is formatted as you type](assets/images/editor-live.gif)
+<figcaption>You write, formatted as you type</figcaption>
+</figure>
+<figure markdown>
+![The History page: what changed in a note, and who changed it](assets/images/shot-history.png)
+<figcaption>Every change, and who made it</figcaption>
+</figure>
 </div>
 
 ---
@@ -54,7 +69,7 @@ Unibrain gives them **one shared memory you own**. Ask any of them to *"research
 
     ---
 
-    Search, read, tick off tasks, organize and keep folders offline. Diagrams, math and callouts render beautifully, and it installs to your home screen.
+    Search, read and write: an editor that formats as you type, tasks you tick off, a history of every change and folders kept offline. It installs to your home screen.
 
     [:octicons-arrow-right-24: The web app](features/web-app.md)
 

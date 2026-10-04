@@ -6,6 +6,17 @@ title: Slides
 
 Turn any note into a presentation. Unibrain shows [Marp](https://marp.app) decks as slides: write them in Markdown, present them from your phone or laptop, and save them as a PDF.
 
+<div class="shots" markdown>
+<figure markdown>
+![A deck shown as a column of slides](../assets/images/shot-slides.png)
+<figcaption>Every slide, one under another</figcaption>
+</figure>
+<figure markdown>
+![A slide shown full screen on a phone turned on its side](../assets/images/shot-present.png)
+<figcaption>Present, full screen</figcaption>
+</figure>
+</div>
+
 ## Write a deck
 
 Add `marp: true` to the note's properties and separate slides with a line of `---`:

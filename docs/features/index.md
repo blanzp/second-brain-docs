@@ -16,7 +16,7 @@ title: Features
 
 -   :material-cellphone: __[The web app](web-app.md)__
 
-    Phone-first search and reading, with a history of every change, installable to your home screen.
+    Search, read and write on your phone, with a history of every change. Installs to your home screen.
 
 -   :material-pencil-outline: __[Writing](editor.md)__
 

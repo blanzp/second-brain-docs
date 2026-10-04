@@ -6,6 +6,13 @@ title: Tasks
 
 Write todos where they belong, in the note about the project, the trip or the house. The **Tasks** page pulls them all together.
 
+<div class="shots" markdown>
+<figure markdown>
+![The Tasks page, with todos grouped by note and due dates marked](../assets/images/shot-tasks.png)
+<figcaption>Every todo, grouped by note</figcaption>
+</figure>
+</div>
+
 ## Todos, not lists
 
 Checkboxes mean two things, and Unibrain keeps them apart:

@@ -6,6 +6,13 @@ title: Vault settings
 
 Your vault, your conventions. Settings live **in your vault** as `.brain/settings.json`, so the web app, the MCP tools and every agent follow the same rules. Change them under **⚙ Settings** in the web app.
 
+<div class="shots" markdown>
+<figure markdown>
+![The Settings page](../assets/images/shot-settings.png)
+<figcaption>Settings, in the app</figcaption>
+</figure>
+</div>
+
 | Setting | What it does | Default |
 |---|---|---|
 | **Title** | The app's name in the header and tab, e.g. "My brain" | Unibrain |

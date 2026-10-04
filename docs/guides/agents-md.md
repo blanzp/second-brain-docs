@@ -20,7 +20,7 @@ title: Write your AGENTS.md
 # Rules for AI assistants
 
 ## What this vault is for
-My long-term memory, shared by me and my agents. I mostly read it on my phone.
+My long-term memory, shared by me and my agents. I read and write it on my phone.
 Write for me reading later: clear, self-contained, skimmable, summary first.
 
 ## Where notes go

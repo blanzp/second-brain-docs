@@ -6,6 +6,13 @@ title: Organizing
 
 Reorganize freely: links never break.
 
+<div class="shots" markdown>
+<figure markdown>
+![The Organize sheet: name, folder and tags](../assets/images/shot-organize.png)
+<figcaption>Rename, move and retag in one step</figcaption>
+</figure>
+</div>
+
 ## Move and rename
 
 - **Notes and folders** can be moved and renamed by you (the **Organize** button on a note) or by any agent.

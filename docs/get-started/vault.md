@@ -27,7 +27,7 @@ Edit it whenever you like; changes apply within a minute. Here's a starting poin
 # Rules for AI assistants
 
 ## What this vault is for
-My personal knowledge base. I mostly read it on my phone; assistants write to it when I ask
+My personal knowledge base. I read and write it on my phone; assistants add to it when I ask
 them to research, summarize or record something. Write for me reading later on my phone:
 clear, self-contained, summary first.
 

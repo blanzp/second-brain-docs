@@ -4,7 +4,7 @@ title: The web app
 
 # The web app
 
-Your agents do much of the writing, so the web app is built for **reading and reviewing** first, with a proper editor for when you write yourself. It is designed for the phone. Open **[unibrain.dev](https://unibrain.dev)** and add it to your home screen.
+The web app is where you **read, review and write**: what your agents saved, and your own notes. It is designed for the phone first and works as well on a computer. Open **[unibrain.dev](https://unibrain.dev)** and add it to your home screen.
 
 <div class="shots" markdown>
 <figure markdown>

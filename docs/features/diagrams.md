@@ -6,6 +6,13 @@ title: Diagrams and math
 
 Ask for a picture instead of a paragraph. Write a fenced code block whose language is the diagram type, and the web app draws it. Tap any diagram to view it full screen and zoom.
 
+<div class="shots" markdown>
+<figure markdown>
+![A note with a sequence diagram, a flowchart and a formula](../assets/images/shot-diagrams.png)
+<figcaption>PlantUML, Mermaid and math in one note</figcaption>
+</figure>
+</div>
+
 ````markdown
 ```mermaid
 flowchart LR
