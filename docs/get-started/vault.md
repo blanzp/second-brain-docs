@@ -20,7 +20,11 @@ GitHub opens its "Create a new repository" form with everything filled in:
 
 ![GitHub's "Create a new repository" form, with the starter template chosen, the name unibrain-vault filled in, Private selected and the Create repository button outlined](../assets/images/gh-create-vault.png){ .screenshot }
 
-That's it: your vault exists. You can see what the starter contains at [github.com/blanzp/unibrain-vault-template](https://github.com/blanzp/unibrain-vault-template).
+That's it: your vault exists. GitHub shows your new repository, with the welcome note and its next steps:
+
+![The new repository on GitHub, showing the welcome note: Welcome to your vault, Next steps, What's here](../assets/images/gh-vault-created.png){ .screenshot }
+
+You can see what the starter contains before you begin at [github.com/blanzp/unibrain-vault-template](https://github.com/blanzp/unibrain-vault-template).
 
 ??? note "Starting empty, or using a repo you already have"
     **An empty vault:** go to [github.com/new](https://github.com/new), give it a name, choose **Private**, tick **Add a README file** so the repo isn't empty, and click **Create repository**.
