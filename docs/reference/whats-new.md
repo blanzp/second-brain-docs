@@ -11,6 +11,7 @@ title: What's new
 - **Properties as a form:** tags as chips, a date picker, add and remove, with no YAML to edit by hand.
 - **Pictures from your phone:** take a photo or pick one, and it lands in the note.
 - **History:** see what changed in a note and who changed it, with additions and removals marked. See [History](../features/web-app.md#history).
+- **No silent overwrites:** an agent's rewrite is refused if the note changed since the agent read it, so two agents, or you and an agent, can't wipe out each other's edits.
 - **Slides:** a note with `marp: true` becomes a deck, with a Present mode and PDF export.
 - **Ask your AI of choice:** the Ask button opens Claude, ChatGPT or Gemini, set in Settings.
 - **A new name and home:** Unibrain, at unibrain.dev, with a new logo; light and dark mode you can choose per device.

@@ -23,6 +23,7 @@ claude-code-gardener          organize: archive Projects/old-idea.md (claude-cod
 ## Nothing disappears
 
 - **There is no delete tool.** Agents can create, add, edit, move, rename and archive. Archiving moves a note to `Archives/` under the same path, and **Unarchive** puts it back exactly where it was.
+- **No silent overwrites.** An agent that rewrites part of a note has to say which version of it it read. If you or another agent changed the note in the meantime, the rewrite is refused and the agent reads the note again. The web editor does the same for your own edits.
 - **Full history.** Every version of every note is in Git. Anything can be restored.
 
 ## A safety net that watches every commit

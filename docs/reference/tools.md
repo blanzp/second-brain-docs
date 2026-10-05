@@ -18,7 +18,7 @@ The 28 tools every connected app gets. Every tool that **writes** also accepts a
 |---|---|---|
 | `search_notes` | `query`, `tag`, `folder`, `limit` | Full-text search (every word must appear), optionally limited to a tag (nested tags count) or folder. Returns paths, titles and snippets. |
 | `list_folder` | `folder` | Subfolders, notes and other files in a folder. |
-| `read_note` | `path` | A note's full Markdown, including its properties. |
+| `read_note` | `path` | A note's full Markdown, including its properties, followed by the note's **version**. |
 | `view_image` | `path` | Look at an image in the vault. |
 | `get_links` | `path` | A note's outgoing links (and where each resolves) and its backlinks, with context. |
 | `list_tags` | | Every tag in the vault, with note counts. |
@@ -32,9 +32,9 @@ The 28 tools every connected app gets. Every tool that **writes** also accepts a
 |---|---|---|
 | `create_note` | `title`, `content`, `folder`, `tags`, `prompt` | A new note; the file name is the title. Properties (created, source, prompt) are added for you. |
 | `append_to_note` | `path`, `content`, `heading` | Add to a note without changing what's there: under a heading, or as a dated *Update* section. |
-| `replace_section` | `path`, `heading`, `content` | Replace one section's body. |
-| `replace_text` | `path`, `find`, `replace`, `all` | Replace exact text, such as one link or a typo. |
-| `set_properties` | `path`, `set`, `remove` | Set or remove properties (tags, status, dates, custom fields). |
+| `replace_section` | `path`, `heading`, `content`, `expected_version` | Replace one section's body. The version from `read_note` is required: if the note has changed since it was read, nothing is saved. |
+| `replace_text` | `path`, `find`, `replace`, `all`, `expected_version` | Replace exact text, such as one link or a typo. |
+| `set_properties` | `path`, `set`, `remove`, `expected_version` | Set or remove properties (tags, status, dates, custom fields). |
 | `add_link` | `from`, `to`, `heading`, `label` | Link one note to another under a heading (default *Related*), with link text that resolves correctly. |
 | `attach_image` | `note`, `url` or `data_base64` or `svg`, `filename`, `width`, `caption`, `heading` | Save an image in the note's attachments folder and embed it. Up to 10 MB; downloads only from public addresses. |
 | `append_to_daily` | `content`, `date`, `heading` | Add to a daily note (created if needed), with a timestamp in your time zone. |
