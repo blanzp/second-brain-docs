@@ -14,7 +14,10 @@ The **Uni Brain MCP** GitHub App is how Unibrain reaches your vault, and **only 
 
 2. Choose **your account**.
 3. Select **Only select repositories** and pick your vault repo. Don't choose "All repositories".
-4. Review the permissions GitHub shows, then click **Install**.
+
+    ![GitHub's permissions and repository access screen for the app: Only select repositories is chosen and one repository, the vault, is listed](../assets/images/gh-app-install.png){ .screenshot }
+
+4. Review the permissions GitHub shows, then click **Install**. (The button says **Save**, as in the picture, when you come back later to change the choice.)
 
 ## What the app can do
 
