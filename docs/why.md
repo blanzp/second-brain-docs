@@ -49,7 +49,7 @@ The landscape moves quickly. This is our honest reading as of October 2026; chec
 | No delete tool, plus a rollback safety net | <span class="yes">Yes</span> | Version history | File recovery | Trash and history | n/a |
 | Phone reading, offline folders | <span class="yes">Yes</span> | Mobile access | <span class="yes">Yes</span> | <span class="yes">Yes</span> | n/a |
 | 26 diagram types and math | <span class="yes">Yes</span> | Not checked | Mermaid, plugins | Mermaid | n/a |
-| Teams and shared workspaces | Not yet | <span class="yes">Yes</span> | Shared vaults | <span class="yes">Yes</span> | n/a |
+| Teams and shared workspaces | No | <span class="yes">Yes</span> | Shared vaults | <span class="yes">Yes</span> | n/a |
 
 **Where Unibrain shines:** people who let several agents write to their notes and want to stay in control, and anyone who wants their knowledge base to be a plain Git repo rather than someone else's database.
 

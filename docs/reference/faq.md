@@ -26,7 +26,7 @@ title: FAQ
     Yes. Unibrain notices your pushes within about a second through GitHub webhooks. Pull before you edit, and push soon after, as with any shared repo.
 
 ??? question "Can I share a vault with someone?"
-    Not yet: each vault belongs to one user. Shared vaults are being considered.
+    No: each vault belongs to one user.
 
 ??? question "Does it work offline?"
     Reading does: notes you've opened, and whole folders you keep offline. Editing needs a connection. See [Offline reading](../features/offline.md).

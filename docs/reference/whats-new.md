@@ -27,14 +27,8 @@ title: What's new
 
 - **Unibrain launches:** the MCP server with 28 tools, multi-user sign-in through GitHub, the safety net, and the phone-first web app with diagrams, math, offline reading and a Tasks page.
 
-## Ideas we're exploring
+## What's next
 
-Not promises, but where we're looking next:
+Unibrain is in early access and still taking shape, so there is no fixed roadmap. What gets built next depends mostly on what early users ask for.
 
-- Undoing an agent's changes in one tap, from a note's History.
-- An activity feed of what each agent did today.
-- Per-agent permissions, such as read-only, or writing only in some folders.
-- Better ranked search.
-- Shared vaults.
-
-Have an idea? [Open an issue](https://github.com/blanzp/second-brain-docs/issues).
+Have an idea, or something that's getting in your way? [Open an issue](https://github.com/blanzp/second-brain-docs/issues).
