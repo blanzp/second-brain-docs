@@ -17,7 +17,7 @@ Obsidian is an excellent editor on a computer. Unibrain doesn't try to beat it t
 - **Your AI assistants can use it, from anywhere.** Claude, ChatGPT and other assistants read and write your vault directly, including from their phone and web apps. Obsidian's AI options are plugins that run on your computer, each with its own setup and API key, and nothing outside that computer can reach your notes.
 - **One memory across every assistant.** What you saved with one is there when you ask another, and in Obsidian the next time it syncs.
 - **Your vault in any browser.** Obsidian has no web version. Unibrain opens on a work computer, a borrowed laptop or a tablet, with nothing to install.
-- **You can see what an assistant did.** Every change is recorded with who made it, and each note has a [History](../features/web-app.md#history) showing exactly what was added and removed. Assistants can't delete notes, and can't overwrite a change they haven't read.
+- **You can see what an assistant did.** Every change is recorded with who made it, and each note has a [History](../features/web-app.md#history) showing exactly what was added and removed. Assistants can't delete notes, and when one rewrites a section, the change is refused if the note was edited since the assistant read it.
 - **Nothing to give up.** The files don't change format and Obsidian keeps working on them.
 
 **Reasons to move, at least on your phone**
