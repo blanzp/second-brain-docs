@@ -8,9 +8,13 @@ Setup takes about **20 minutes**, and you only do it once.
 
 <div class="grid cards" markdown>
 
+-   :material-numeric-0-circle:{ .lg .middle } __[Create a GitHub account](github-account.md)__
+
+    Where your notes are kept, and how you sign in. Free. Skip this if you already have one. *3 minutes.*
+
 -   :material-numeric-1-circle:{ .lg .middle } __[Create your vault](vault.md)__
 
-    A private GitHub repo for your notes, plus an optional `AGENTS.md` that tells your AI how you like things. *5 minutes.*
+    A private place for your notes on GitHub, made from a starter in two clicks. *2 minutes.*
 
 -   :material-numeric-2-circle:{ .lg .middle } __[Install the GitHub App](github-app.md)__
 
@@ -32,7 +36,7 @@ Setup takes about **20 minutes**, and you only do it once.
 
 ## What you need
 
-- A **GitHub account**. The free plan is fine.
+- A **GitHub account**. The free plan is fine, and [step 0](github-account.md) shows how to get one.
 - At least one **AI app that supports MCP connectors**: Claude, ChatGPT (a paid plan is needed for custom connectors), Claude Code, Hermes, or another MCP client.
 
 That's it. There's nothing to install on your computer.

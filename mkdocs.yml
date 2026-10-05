@@ -82,6 +82,7 @@ nav:
   - Why Unibrain: why.md
   - Get started:
       - get-started/index.md
+      - 0. Create a GitHub account: get-started/github-account.md
       - 1. Create your vault: get-started/vault.md
       - 2. Install the GitHub App: get-started/github-app.md
       - 3. Request access: get-started/access.md
