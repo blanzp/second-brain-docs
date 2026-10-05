@@ -29,7 +29,7 @@ You can see what the starter contains before you begin at [github.com/blanzp/uni
 ??? note "Starting empty, or using a repo you already have"
     **An empty vault:** go to [github.com/new](https://github.com/new), give it a name, choose **Private**, tick **Add a README file** so the repo isn't empty, and click **Create repository**.
 
-    **An existing repo:** any repo of Markdown notes works, including an Obsidian vault. Folders, links, tags and attachments are understood as they are. There is nothing to create; go straight to the next step.
+    **An existing repo:** any repo of Markdown notes works, including an Obsidian vault. Folders, links, tags and attachments are understood as they are. There is nothing to create; go straight to the next step. An Obsidian vault that isn't on GitHub yet: see [Moving from Obsidian](../guides/obsidian.md).
 
 ## Tell your AI what the vault is for
 

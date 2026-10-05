@@ -10,6 +10,9 @@ title: FAQ
 ??? question "Can I use a repo I already have?"
     Yes. Any repo of Markdown notes works, including an existing Obsidian vault. Install the GitHub App on it and request access with that repo.
 
+??? question "My Obsidian vault isn't on GitHub. How do I bring it over?"
+    [Moving from Obsidian](../guides/obsidian.md) walks through it, with a way that needs no command line, and says what carries over and what doesn't.
+
 ??? question "Which AI apps work?"
     Claude (desktop, web, iPhone, Android), ChatGPT (paid plans, Developer mode), Claude Code, Hermes, and any client that supports remote MCP with OAuth. See [Connect your AI](../connect/index.md).
 

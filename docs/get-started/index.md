@@ -42,4 +42,4 @@ Setup takes about **20 minutes**, and you only do it once.
 That's it. There's nothing to install on your computer.
 
 !!! tip "Already have notes in GitHub?"
-    If you keep an Obsidian vault or a folder of Markdown notes in a GitHub repo, use that repo. Unibrain works with it as it is.
+    If you keep an Obsidian vault or a folder of Markdown notes in a GitHub repo, use that repo. Unibrain works with it as it is. If your Obsidian vault isn't on GitHub yet, see [Moving from Obsidian](../guides/obsidian.md).

@@ -113,6 +113,7 @@ nav:
       - Name your agents: guides/named-agents.md
       - Run a team of agents: guides/multi-agent.md
       - Note-writing syntax: guides/markdown.md
+      - Moving from Obsidian: guides/obsidian.md
   - Reference:
       - MCP tools: reference/tools.md
       - Privacy and security: reference/privacy.md

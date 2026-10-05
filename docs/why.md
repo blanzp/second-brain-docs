@@ -57,7 +57,7 @@ The landscape moves quickly. This is our honest reading as of October 2026; chec
 
 ### Works with Obsidian, doesn't replace it
 
-Unibrain follows Obsidian's Markdown conventions: `[[wiki links]]`, `#tags`, callouts, embeds, block links and task due dates. An existing Obsidian vault in GitHub works as-is, and you can keep editing it in Obsidian on your desktop while your agents and phone use Unibrain.
+Unibrain follows Obsidian's Markdown conventions: `[[wiki links]]`, `#tags`, callouts, embeds, block links and task due dates. An existing Obsidian vault in GitHub works as-is, and you can keep editing it in Obsidian on your desktop while your agents and phone use Unibrain. [Moving from Obsidian](guides/obsidian.md) shows how.
 
 ## Who it's for
 
