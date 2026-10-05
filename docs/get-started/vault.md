@@ -10,11 +10,11 @@ Your **vault** is a private GitHub repository of Markdown notes. It belongs to y
 
 The quickest way is to start from the **starter vault**, which comes with a welcome note, a short list of things to try, and a set of rules for your AI assistants.
 
-[Create my vault from the starter :material-github:](https://github.com/new?template_owner=blanzp&template_name=unibrain-vault-template&name=second-brain&visibility=private&description=My+Unibrain+vault){ .md-button .md-button--primary }
+[Create my vault from the starter :material-github:](https://github.com/new?template_owner=blanzp&template_name=unibrain-vault-template&name=unibrain-vault&visibility=private&description=My+Unibrain+vault){ .md-button .md-button--primary }
 
 GitHub opens its "Create a new repository" form with everything filled in:
 
-1. **Repository name:** `second-brain` is suggested; change it to anything you like.
+1. **Repository name:** `unibrain-vault` is suggested; change it to anything you like, such as `notes` or `second-brain`.
 2. Check that **Private** is selected. Only you, and the apps you allow, can see a private repo.
 3. Click **Create repository**.
 
