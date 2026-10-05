@@ -18,6 +18,8 @@ GitHub opens its "Create a new repository" form with everything filled in:
 2. Check that **Private** is selected. Only you, and the apps you allow, can see a private repo.
 3. Click **Create repository**.
 
+![GitHub's "Create a new repository" form, with the starter template chosen, the name unibrain-vault filled in, Private selected and the Create repository button outlined](../assets/images/gh-create-vault.png){ .screenshot }
+
 That's it: your vault exists. You can see what the starter contains at [github.com/blanzp/unibrain-vault-template](https://github.com/blanzp/unibrain-vault-template).
 
 ??? note "Starting empty, or using a repo you already have"

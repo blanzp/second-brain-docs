@@ -91,3 +91,6 @@
 
 /* Page titles at full strength */
 .md-typeset h1 { color: var(--md-default-fg-color); font-weight: 700; }
+
+/* Screenshots of other sites (GitHub, Claude…): wider than a phone, framed the same way */
+.md-typeset img.screenshot { display: block; max-width: min(100%, 620px); margin: 1rem 0; border-radius: 10px; border: 1px solid var(--md-default-fg-color--lightest); box-shadow: 0 6px 20px rgb(0 0 0 / 0.1); }
