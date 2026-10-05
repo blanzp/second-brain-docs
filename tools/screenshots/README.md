@@ -34,3 +34,14 @@ Then look at the changed images, build the site (`mkdocs build --strict`) and co
 
 Not covered here: screens in other products (installing the GitHub App, adding the connector in Claude or ChatGPT),
 which need real screenshots, and the Offline and Usage stats pages, which need a service worker and real statistics.
+
+## Try the app on another vault
+
+The same server can show any folder of Markdown, such as a real Obsidian vault, to see how it looks and how fast it is. Nothing is written to that folder: the server works on a temporary copy.
+
+```bash
+VAULT_DIR=/path/to/a/vault npm run server     # then open http://127.0.0.1:8788/app/
+```
+
+"Recently changed" is then the vault's newest files, and History is empty.
+

@@ -3,6 +3,7 @@
 //
 //   APP_REPO=../../../second-brain-mcp  (default)   the app's repo: its public/ and src/ are used as they are
 //   PORT=8788
+//   VAULT_DIR=./vault  (default)   the notes to serve; point it at any folder of Markdown to try that vault
 import http from 'node:http'
 import fs from 'node:fs'
 import os from 'node:os'
@@ -13,6 +14,8 @@ import { fileURLToPath } from 'node:url'
 const HERE = path.dirname(fileURLToPath(import.meta.url))
 const APP = path.resolve(process.env.APP_REPO ?? path.join(HERE, '../../../second-brain-mcp'))
 const PORT = Number(process.env.PORT ?? 8788)
+// The notes to serve: the made-up demo vault, or any folder of Markdown (e.g. a real Obsidian vault, to try it out)
+const VAULT_DIR = path.resolve(process.env.VAULT_DIR ?? path.join(HERE, 'vault'))
 const { Vault } = await import(path.join(APP, 'src/vault.ts'))
 const { renderNote } = await import(path.join(APP, 'src/render.ts'))
 const { wikiTextFor } = await import(path.join(APP, 'src/links.ts'))
@@ -38,13 +41,15 @@ function reset() {
   const copy = (from: string, to: string) => {
     fs.mkdirSync(to, { recursive: true })
     for (const entry of fs.readdirSync(from, { withFileTypes: true })) {
+      if (entry.name === '.git') continue
       const a = path.join(from, entry.name)
       const b = path.join(to, entry.name)
       if (entry.isDirectory()) copy(a, b)
-      else fs.writeFileSync(b, fs.readFileSync(a, 'utf8').replace(/\{\{([+-]\d+)d\}\}/g, (_m, n) => day(Number(n))))
+      else if (/\.md$/i.test(entry.name)) fs.writeFileSync(b, fs.readFileSync(a, 'utf8').replace(/\{\{([+-]\d+)d\}\}/g, (_m, n) => day(Number(n))))
+      else fs.copyFileSync(a, b) // pictures and other attachments, byte for byte
     }
   }
-  copy(path.join(HERE, 'vault'), root)
+  copy(VAULT_DIR, root)
   vault = new Vault(root, 'Europe/Rome')
 
   // Who changed what, and when: made up, newest first
@@ -58,10 +63,26 @@ function reset() {
     ['tech/System Overview.md', 'claude-code (brain-mcp)', 96],
     ['inbox/Reading List.md', 'web (brain-mcp)', 120],
   ]
-  recent = changed.map(([p, author, hoursAgo]) => ({ path: p, title: path.posix.basename(p, '.md'), date: new Date(Date.now() - hoursAgo * HOUR).toISOString(), author }))
+  recent = changed
+    .filter(([p]) => fs.existsSync(path.join(root, p)))
+    .map(([p, author, hoursAgo]) => ({ path: p, title: path.posix.basename(p, '.md'), date: new Date(Date.now() - hoursAgo * HOUR).toISOString(), author }))
+  history = new Map()
+  // Another vault (VAULT_DIR): there is no made-up history for it, and "recently changed" is simply its newest files
+  if (!recent.length) {
+    const all: { p: string; at: number }[] = []
+    const walk = (dir: string, rel: string) => {
+      for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+        if (e.name.startsWith('.')) continue
+        if (e.isDirectory()) walk(path.join(dir, e.name), rel ? `${rel}/${e.name}` : e.name)
+        else if (/\.md$/i.test(e.name)) all.push({ p: rel ? `${rel}/${e.name}` : e.name, at: fs.statSync(path.join(VAULT_DIR, rel, e.name)).mtimeMs })
+      }
+    }
+    walk(root, '')
+    recent = all.sort((a, b) => b.at - a.at).slice(0, 25).map(({ p, at }) => ({ path: p, title: path.posix.basename(p, '.md'), date: new Date(at).toISOString(), author: 'obsidian' }))
+    return
+  }
 
   // One note with a history worth looking at: Claude wrote it, you edited it for a while, then an agent updated it
-  history = new Map()
   const p = 'travel/Weekend in Siena.md'
   const now = fs.readFileSync(path.join(root, p), 'utf8')
   const first = now
@@ -140,6 +161,10 @@ async function api(name: string, method: string, query: URLSearchParams, body: R
       const content = await vault.read(String(body.path))
       return [200, { content, hash: sha(content) }]
     }
+    case 'GET file': {
+      // Handled before this function (it isn't JSON); listed here so the default below never answers for it
+      return [404, { error: 'not found' }]
+    }
     case 'GET history':
       return [200, { versions: (history.get(p) ?? []).map(({ content, ...v }) => v) }]
     case 'GET version': {
@@ -183,6 +208,14 @@ http.createServer((req, res) => {
   req.on('data', (c) => chunks.push(c)).on('end', async () => {
     try {
       const isApi = url.pathname.startsWith('/app/api/web/')
+      if (url.pathname === '/app/api/web/file') {
+        // Pictures and other attachments, from inside the temporary vault only
+        const full = path.resolve(root, url.searchParams.get('path') ?? '')
+        if (!full.startsWith(root + path.sep) || !fs.existsSync(full) || fs.statSync(full).isDirectory()) { res.writeHead(404); return res.end() }
+        const type = ({ '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.gif': 'image/gif', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.pdf': 'application/pdf' } as Record<string, string>)[path.extname(full).toLowerCase()] ?? 'application/octet-stream'
+        res.writeHead(200, { 'Content-Type': type })
+        return fs.createReadStream(full).pipe(res)
+      }
       if (isApi || url.pathname.startsWith('/demo/')) {
         const raw = Buffer.concat(chunks).toString()
         const body = raw.startsWith('{') ? JSON.parse(raw) : {}
