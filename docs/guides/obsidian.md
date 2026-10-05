@@ -8,6 +8,36 @@ An Obsidian vault is a folder of Markdown files, which is exactly what Unibrain 
 
 You can move completely, or keep Obsidian on your computer and use Unibrain everywhere else.
 
+## Why you might
+
+Obsidian is an excellent editor on a computer. Unibrain doesn't try to beat it there. It covers what Obsidian leaves out.
+
+**Reasons to add Unibrain to the vault you have**
+
+- **Your AI assistants can use it, from anywhere.** Claude, ChatGPT and other assistants read and write your vault directly, including from their phone and web apps. Obsidian's AI options are plugins that run on your computer, each with its own setup and API key, and nothing outside that computer can reach your notes.
+- **One memory across every assistant.** What you saved with one is there when you ask another, and in Obsidian the next time it syncs.
+- **Your vault in any browser.** Obsidian has no web version. Unibrain opens on a work computer, a borrowed laptop or a tablet, with nothing to install.
+- **You can see what an assistant did.** Every change is recorded with who made it, and each note has a [History](../features/web-app.md#history) showing exactly what was added and removed. Assistants can't delete notes, and can't overwrite a change they haven't read.
+- **Nothing to give up.** The files don't change format and Obsidian keeps working on them.
+
+**Reasons to move, at least on your phone**
+
+- **A phone app built for the phone.** Fast to open, a toolbar that sits on the keyboard, notes formatted as you type, a page of every task, whole folders kept offline.
+- **Sync you don't have to think about.** There's no sync plugin on the phone to misbehave and no duplicate files to tidy. You open the app and your notes are current.
+- **No plugins to maintain.** Tasks, diagrams, math, slides and history are built in, and work the same on every device.
+- **Free of sync fees.** Your notes are in your own GitHub account, on its free plan.
+
+**Reasons to stay with Obsidian alone**
+
+It's worth being straight about these:
+
+- **You rely on plugins.** Dataview dashboards, Excalidraw drawings, Canvas and Templater don't work in Unibrain. See [what doesn't carry over](#what-doesnt).
+- **You need to write with no connection.** Unibrain reads offline, but editing needs a connection.
+- **You don't use AI assistants with your notes**, and Obsidian on your devices already suits you. Then there's little to gain.
+- **You'd rather not use GitHub.** Unibrain needs your vault there.
+
+If the first two lists sound like you, the rest of this page shows how.
+
 | You want | Do this |
 |---|---|
 | Your vault in any browser and on your phone, without fighting sync | [Put the vault on GitHub](#put-your-vault-on-github), then use Unibrain in place of Obsidian's mobile app |
