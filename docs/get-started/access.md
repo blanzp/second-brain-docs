@@ -7,7 +7,7 @@ title: 3. Request access
 Unibrain is in **invite-only early access**, so each new user is added by hand. It only needs two things from you:
 
 - your **GitHub username**, for example `alice`;
-- your **vault repo**, for example `alice/second-brain`.
+- your **vault repo**, for example `alice/unibrain-vault`.
 
 **[Request access on GitHub :material-github:](https://github.com/blanzp/second-brain-docs/issues/new?template=request-access.yml){ .md-button .md-button--primary }**
 

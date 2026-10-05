@@ -20,7 +20,7 @@ body:
     attributes:
       label: Vault repository
       description: owner/name of the private repo you installed the app on
-      placeholder: alice/second-brain
+      placeholder: alice/unibrain-vault
     validations:
       required: true
   - type: checkboxes
