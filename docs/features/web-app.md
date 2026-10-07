@@ -43,7 +43,7 @@ The web app is where you **read, review and write**: what your agents saved, and
 - **Tap any image or diagram** to view it full screen, with pinch to zoom.
 - **Tick checkboxes** right in the note.
 - Tap a link to a note that **doesn't exist yet** to create it.
-- **Ask** opens a chat about the note in the AI you chose in Settings: Claude, ChatGPT or Gemini. **Share** sends the `.md` file through your phone's share sheet.
+- **Ask** opens a chat about the note in the AI you chose in Settings: Claude, ChatGPT or Gemini. **Share** copies the note's text, or sends the `.md` file through your phone's share sheet.
 - Notes marked as [slides](slides.md) open as a deck you can present or save as a PDF.
 
 ## History
