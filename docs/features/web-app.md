@@ -39,6 +39,7 @@ The web app is where you **read, review and write**: what your agents saved, and
 
 - Clean typography in **light and dark mode**: follow your device, or choose one under ⚙ Settings → Appearance (remembered per device).
 - **Rendered beautifully:** wiki links and embeds, callouts, highlights, footnotes, block links, [26 diagram types and math](diagrams.md), syntax-highlighted code.
+- **Favorites:** tap the ☆ at the top of a note to keep it at the top of the Home screen. Favorites are saved in your vault, so they are the same on every device, and a note keeps its star when you rename or move it.
 - **Contents** button for long notes, and **Linked from** listing the notes that link here.
 - **Tap any image or diagram** to view it full screen, with pinch to zoom.
 - **Tick checkboxes** right in the note.
@@ -64,6 +65,14 @@ Every change to a note is kept. Tap **History** on a note to see what changed.
 - History follows a note through **renames and moves**.
 
 It is the quickest way to check what an agent did to a note. History shows the differences; it doesn't restore an old version.
+
+### Recent changes
+
+To see what your agents have been doing across the whole vault, tap **Recent changes** on the Home screen. It lists the notes changed most recently, grouped by the agent that changed them, each with its latest change shown the same way: added lines in green, removed lines in red.
+
+- **Agents** shows only what your agents changed. **Everyone** adds your own edits, listed as *You*.
+- Saves an agent made close together count as one change.
+- Tap a note's name to fold its change away, **Open note** to read it, or **Full history** for everything before.
 
 ## Writing and organizing
 

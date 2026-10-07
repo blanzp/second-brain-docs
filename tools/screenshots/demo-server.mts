@@ -118,7 +118,23 @@ async function api(name: string, method: string, query: URLSearchParams, body: R
     case 'GET settings':
       return [200, { settings: { ...settings, inboxFolder: 'inbox' }, defaults: vault.defaults, problems, serverAppName: 'Unibrain', folders: await vault.folders(), timeZones: Intl.supportedValuesOf('timeZone') }]
     case 'GET recent':
-      return [200, { notes: recent }]
+      return [200, { notes: recent, favorites: settings.favorites.map((f) => ({ path: f, title: path.posix.basename(f, '.md') })) }]
+    case 'POST favorite':
+      return [200, { favorite: (await vault.setFavorite(String(body.path), body.on === true)).includes(String(body.path)) }]
+    // Made up like the rest of the history: a note with recorded versions shows its real last change,
+    // any other note shows its last few lines as just added
+    case 'GET changes': {
+      const limit = Math.min(25, Number(query.get('limit')) || 5)
+      const list = recent.filter((r) => query.get('all') === '1' || r.author !== 'web (brain-mcp)')
+      const changes = await Promise.all(list.slice(0, limit).map(async (r) => {
+        const after = await vault.read(r.path)
+        const versions = history.get(r.path) ?? []
+        const lines = after.trimEnd().split('\n')
+        const before = versions[1]?.content ?? `${lines.slice(0, -3).join('\n')}\n`
+        return { path: r.path, title: r.title, author: r.author, date: r.date, from: r.date, saves: 1, created: false, before, after }
+      }))
+      return [200, { changes, more: list.length > limit }]
+    }
     case 'GET search': {
       const q = (query.get('q') ?? '').trim()
       const tags = [...q.matchAll(/(?:^|\s)#([^\s#]+)/g)].map((m) => m[1])
@@ -145,7 +161,7 @@ async function api(name: string, method: string, query: URLSearchParams, body: R
     case 'GET note': {
       const content = await vault.read(p)
       const r = await render(p, content)
-      return [200, { path: p, title: r.title, html: r.html, properties: r.properties, deck: r.deck, content, hash: sha(content) }]
+      return [200, { path: p, title: r.title, html: r.html, properties: r.properties, deck: r.deck, content, hash: sha(content), favorite: settings.favorites.includes(p) }]
     }
     case 'PUT note': {
       await vault.writeNote(String(body.path), String(body.content))
