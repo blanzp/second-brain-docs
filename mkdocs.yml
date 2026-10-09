@@ -108,6 +108,7 @@ nav:
       - Organizing: features/organize.md
       - Vault settings: features/settings.md
       - Usage stats: features/stats.md
+      - Mission control (alpha): features/mission-control.md
   - Guides:
       - Write your AGENTS.md: guides/agents-md.md
       - Name your agents: guides/named-agents.md

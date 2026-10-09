@@ -54,6 +54,14 @@ The 28 tools every connected app gets. Every tool that **writes** also accepts a
 
 There is **no delete tool**, by design.
 
+## Mission control (alpha)
+
+Listed only on a server that offers [Mission control](../features/mission-control.md). There, the tools above also take an optional `agent` (the agent's name), on reads as well as writes.
+
+| Tool | Parameters | What it does |
+|---|---|---|
+| `report_run` | `agent`, `status`, `summary`, `error`, `needs_attention`, `started_at`, `model`, `input_tokens`, `output_tokens` | An agent calls it once at the end of a run, including a failed one: the status and one-line summary appear on your Agents page. It writes no note and makes no commit, and does nothing while your Agents page is off. |
+
 ## ChatGPT deep research
 
 | Tool | What it does |

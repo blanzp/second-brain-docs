@@ -105,22 +105,22 @@ function record(p: string, content: string, author: string, message: string, min
 
 
 // ── Made-up data for the Agents page (mission control), in the shape the real server returns ──
-let agentsOn = true
+let agentsOn = false // the Agents page (alpha) is off until a screenshot turns it on: POST /demo/agents {on: true}
 const AGO = (hours: number) => new Date(Date.now() - hours * HOUR).toISOString()
 const RUN_ID = 'a'.repeat(32)
 const demoAgents = () => ({
   summary: { agents: 7, healthy: 6, needs: 3, problems: 1 },
   needs: [
     { kind: 'proposals', text: '7 proposals to tick', detail: 'Report 2026-10-04 · G16–G22', action: 'Review', href: '#/note/Projects/Launch%20Plan.md', at: null },
-    { kind: 'attention', text: 'TARI €221 due 30 Nov', detail: 'from Property manager', action: 'Open', href: '#/note/home/House%20Admin.md', at: AGO(60) },
+    { kind: 'attention', text: 'Car insurance renews 30 Nov', detail: 'from Bills watcher', action: 'Open', href: '#/note/home/House%20Admin.md', at: AGO(60) },
     { kind: 'agent', text: "OpenClaw hasn't run", detail: 'expected daily 08:00 · 3 days late', action: 'Details', href: '#/agents/openclaw', at: AGO(72) },
   ],
   agents: [
     { id: 'openclaw', name: 'OpenClaw', schedule: 'daily 08:00', state: 'overdue', lastSeen: AGO(80), due: AGO(8), lateMs: 72 * HOUR },
     { id: 'claude-code', name: 'Claude Code', schedule: 'on demand', state: 'active', lastSeen: AGO(0.3), run: { run_id: RUN_ID, status: 'open', start: AGO(0.5), tools: 44 } },
     { id: 'gardener', name: 'Gardener', schedule: 'Sun 07:00', state: 'ok', lastSeen: AGO(100), due: AGO(100), run: { run_id: RUN_ID, status: 'ok', start: AGO(100), end: AGO(99.98), summary: '0 changes, 7 proposals', tools: 31 } },
-    { id: 'lisa', name: 'Lisa', schedule: 'Thu 17:52', state: 'ok', lastSeen: AGO(3), due: AGO(3), run: { run_id: RUN_ID, status: 'ok', start: AGO(3), end: AGO(2.99), summary: 'Posted in the lounge', tools: 6 } },
-    { id: 'property-manager', name: 'Property manager', schedule: 'Mon 08:52', state: 'ok', lastSeen: AGO(60), due: AGO(60), run: { run_id: RUN_ID, status: 'ok', start: AGO(60), end: AGO(59.99), summary: '1 tax notice, already paid', tools: 9 } },
+    { id: 'news-digest', name: 'News digest', schedule: 'daily 07:30', state: 'ok', lastSeen: AGO(3), due: AGO(3), run: { run_id: RUN_ID, status: 'ok', start: AGO(3), end: AGO(2.99), summary: '5 stories saved to Reading List', tools: 6 } },
+    { id: 'bills-watcher', name: 'Bills watcher', schedule: 'Mon 08:52', state: 'ok', lastSeen: AGO(60), due: AGO(60), run: { run_id: RUN_ID, status: 'ok', start: AGO(60), end: AGO(59.99), summary: '1 new bill, due 30 Nov', tools: 9 } },
     { id: 'hermes', name: 'Hermes', schedule: 'on demand', state: 'idle', lastSeen: AGO(44), run: { run_id: RUN_ID, status: 'unreported', start: AGO(44.2), end: AGO(44), tools: 4 } },
     { id: 'igor', name: 'Igor', schedule: 'on demand', state: 'idle', lastSeen: AGO(170) },
     { id: 'old-bot', name: 'Old bot', schedule: 'daily 06:00', state: 'off', lastSeen: null },
@@ -128,7 +128,7 @@ const demoAgents = () => ({
   unknown: [{ name: 'chatgpt', app: 'chatgpt', lastSeen: AGO(26), tools: 0, commits: 2 }],
   timeline: [
     { at: AGO(0.3), agent: 'Claude Code', agent_id: 'claude-code', kind: 'commit', text: 'changed Kafka Tiered Storage and 2 more', detail: 'update: replace section in Kafka Tiered Storage', note: 'tech/Kafka Tiered Storage.md' },
-    { at: AGO(2.99), agent: 'Lisa', agent_id: 'lisa', kind: 'run', text: 'Posted in the lounge', detail: '33s · 6 tool calls · 41k tokens · 1 commit', run_id: RUN_ID, status: 'ok' },
+    { at: AGO(2.99), agent: 'News digest', agent_id: 'news-digest', kind: 'run', text: '5 stories saved to Reading List', detail: '33s · 6 tool calls · 41k tokens · 1 commit', run_id: RUN_ID, status: 'ok' },
     { at: AGO(26), agent: 'chatgpt', kind: 'commit', text: 'changed Tuscany Wine Notes', detail: 'update: append to Tuscany Wine Notes', note: 'travel/Tuscany Wine Notes.md' },
     { at: AGO(30), agent: 'Hermes', agent_id: 'hermes', kind: 'run', text: 'Could not reach the calendar', detail: '12s · 3 tool calls', run_id: RUN_ID, status: 'error' },
     { at: AGO(44), agent: 'Hermes', agent_id: 'hermes', kind: 'run', text: '4 tool calls, no report', detail: '720s · 4 tool calls', run_id: RUN_ID, status: 'unreported' },
@@ -141,22 +141,22 @@ const demoAgent = (id: string) => {
   const a = demoAgents().agents.find((x) => x.id === id)
   if (!a) return null
   return {
-    card: { id: a.id, name: a.name, description: id === 'lisa' ? 'Weekly Agent Lounge check-in, playful persona' : 'An example agent', host: 'claude.ai scheduled task', apps: ['claude'], schedule: a.schedule, timezone: 'America/New_York', model: 'claude-sonnet-5-5', skills: ['lounge-post'], enabled: a.state !== 'off', note: 'travel/Weekend in Siena.md' },
+    card: { id: a.id, name: a.name, description: id === 'news-digest' ? 'Saves the day\'s most relevant stories to the Reading List' : 'An example agent', host: 'Claude scheduled task', apps: ['claude'], schedule: a.schedule, timezone: 'Europe/Rome', model: 'claude-sonnet-5-5', skills: ['reading-list'], enabled: a.state !== 'off', note: 'inbox/Reading List.md' },
     state: a.state, lastSeen: a.lastSeen, due: (a as { due?: string }).due,
     runs: [
-      { run_id: RUN_ID, status: 'ok', start: AGO(3), end: AGO(2.99), summary: 'Posted in the lounge', tools: 6, commits: 1, notes: 1 },
-      { run_id: RUN_ID, status: 'error', start: AGO(171), end: AGO(170.99), error: 'The lounge note was locked', tools: 2, commits: 0, notes: 1 },
-      { run_id: RUN_ID, status: 'unreported', start: AGO(339), end: AGO(338.9), tools: 5, commits: 1, notes: 2 },
+      { run_id: RUN_ID, status: 'ok', start: AGO(3), end: AGO(2.99), summary: '5 stories saved to Reading List', tools: 6, commits: 1, notes: 1 },
+      { run_id: RUN_ID, status: 'error', start: AGO(27), end: AGO(26.99), error: 'Two of the sources could not be reached', tools: 2, commits: 0, notes: 1 },
+      { run_id: RUN_ID, status: 'unreported', start: AGO(51), end: AGO(50.9), tools: 5, commits: 1, notes: 2 },
     ],
   }
 }
 const demoRun = () => ({
-  run: { run_id: RUN_ID, agent: 'Lisa', agent_name: 'Lisa', agent_id: 'lisa', app: 'claude', start: AGO(3), last: AGO(2.991), end: AGO(2.99), status: 'partial', summary: 'Posted in the lounge, but one link failed', error: 'A link to "Agent Lounge#Thursday" would not resolve', model: 'claude-sonnet-5-5', input_tokens: 41200, output_tokens: 880, needs_attention: [{ text: 'Reply to Igor in the lounge', note: 'travel/Weekend in Siena.md' }], tools: 4, errors: 1, commits: ['a73eeb1'], notes: ['travel/Weekend in Siena.md'] },
+  run: { run_id: RUN_ID, agent: 'News digest', agent_name: 'News digest', agent_id: 'news-digest', app: 'claude', start: AGO(3), last: AGO(2.991), end: AGO(2.99), status: 'partial', summary: '4 stories saved, one source failed', error: 'One source asked for a sign-in and was skipped', model: 'claude-sonnet-5-5', input_tokens: 41200, output_tokens: 880, needs_attention: [{ text: 'Check the story about Kafka 4.0', note: 'inbox/Reading List.md' }], tools: 4, errors: 1, commits: ['a73eeb1'], notes: ['inbox/Reading List.md'] },
   spans: [
     { tool: 'vault_guide', start: AGO(3), ms: 12, status: 'ok', note: null, commit: null },
-    { tool: 'read_note', start: AGO(2.998), ms: 48, status: 'ok', note: 'travel/Weekend in Siena.md', commit: null },
-    { tool: 'add_link', start: AGO(2.995), ms: 30, status: 'error', note: 'travel/Weekend in Siena.md', commit: null },
-    { tool: 'append_to_note', start: AGO(2.992), ms: 540, status: 'ok', note: 'travel/Weekend in Siena.md', commit: 'a73eeb1' },
+    { tool: 'read_note', start: AGO(2.998), ms: 48, status: 'ok', note: 'inbox/Reading List.md', commit: null },
+    { tool: 'add_link', start: AGO(2.995), ms: 30, status: 'error', note: 'inbox/Reading List.md', commit: null },
+    { tool: 'append_to_note', start: AGO(2.992), ms: 540, status: 'ok', note: 'inbox/Reading List.md', commit: 'a73eeb1' },
   ],
 })
 
@@ -272,6 +272,7 @@ async function demo(name: string, body: Record<string, unknown>): Promise<[numbe
   }
   if (name === 'reset') {
     reset()
+    agentsOn = false
     return [200, { ok: true }]
   }
   if (name === 'agent-write') {

@@ -42,3 +42,4 @@ Tag its reports (for example `#gardener`) and add that tag under **Not todos** i
 - **Usage stats** shows commits per agent over time.
 - Ask any agent: *"What did each agent change this week? Anything that needs my attention?"*
 - The **safety net** flags rollbacks and deletions, whoever caused them.
+- **[Mission control](../features/mission-control.md) (alpha, optional)** puts it on one page: which agent ran, which is overdue, and what is waiting for your tick.

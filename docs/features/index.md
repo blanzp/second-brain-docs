@@ -50,4 +50,8 @@ title: Features
 
     See your activity: who wrote what, which apps you use, how your vault grows.
 
+-   :material-radar: __[Mission control (alpha)](mission-control.md)__
+
+    Optional and advanced: one page showing which of your agents ran, whether it worked and what is waiting on you.
+
 </div>

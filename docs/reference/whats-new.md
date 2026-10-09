@@ -6,6 +6,9 @@ title: What's new
 
 ## October 2026
 
+- **Mission control (alpha):** an optional Agents page showing which of your agents ran, whether it worked, what it changed and what is waiting on you. Off unless you turn it on. See [Mission control](../features/mission-control.md).
+- **Favorites and Recent changes:** star a note to keep it at the top of Home; see what your agents changed across the vault, as diffs grouped by agent.
+- **A line of counts on Home:** how many notes and open todos you have, each a link.
 - **A new editor:** your note is formatted as you type, with a toolbar that sits on the phone's keyboard, lists that continue, undo, and find and replace. See [Writing](../features/editor.md).
 - **Suggestions while you type:** `[[` lists your notes, `#` your tags. A link to a note that doesn't exist can create it.
 - **Properties as a form:** tags as chips, a date picker, add and remove, with no YAML to edit by hand.

@@ -29,6 +29,7 @@ Your notes are yours. Here's exactly how they're handled.
 - **No passwords.** You sign in with GitHub; the server gets short-lived (hourly) access keys from GitHub for your one repo.
 - **Sign-in tokens are stored hashed.**
 - **Usage counts only:** requests, commits, tools used, timings. Never note contents, titles, paths, searches or commit messages. See [Usage stats](../features/stats.md).
+- **Only if you turn on [Mission control](../features/mission-control.md) (alpha, off by default):** a record of each tool call your agents make: the tool, the agent, the path of the note it was about, the time, and what the agent reported at the end of its run. Never what a note says or what was searched for. Kept 30 days; you can delete it at any time in Settings.
 
 ## On your devices
 

@@ -30,6 +30,12 @@ async function open(hash, { width = 390, height = 780, scale = 2, keep = false }
   await calm(page)
   return page
 }
+/** The same, with the Agents page (alpha) turned on in the demo server. `open` resets the demo, which turns it off again. */
+async function agents(hash, options = {}) {
+  await fetch(`${ORIGIN}/demo/reset`, { method: 'POST' })
+  await fetch(`${ORIGIN}/demo/agents`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ on: true }) })
+  return open(hash, { ...options, keep: true })
+}
 /** No red spelling squiggles in the pictures. */
 const calm = (page) => page.evaluate(() => { const c = document.querySelector('.cm-content'); if (c) c.spellcheck = false })
 const line = (page, text) => page.evaluateHandle((t) => [...document.querySelectorAll('.cm-line')].find((l) => l.textContent.includes(t)), text)
@@ -145,6 +151,41 @@ const shots = {
       await page.waitForSelector('.content svg'); await sleep(500)
       await frame(3)
     })
+  },
+
+  // ── Mission control: the Agents page (alpha), which the demo server answers with made-up data ──
+  'shot-agents.png': async (file) => {
+    const page = await agents('#/agents')
+    await page.waitForSelector('.agent-row'); await sleep(300)
+    await page.screenshot({ path: file })
+  },
+  'shot-agents-timeline.png': async (file) => {
+    const page = await agents('#/agents')
+    await page.waitForSelector('.timeline'); await sleep(300)
+    await page.evaluate(() => { [...document.querySelectorAll('.section-title')].find((e) => e.textContent === 'Unknown agents').scrollIntoView(); window.scrollBy(0, -70) }); await sleep(300)
+    await page.screenshot({ path: file })
+  },
+  'shot-agent.png': async (file) => {
+    const page = await agents('#/agents/news-digest')
+    await page.waitForSelector('.agent-card'); await sleep(300)
+    await page.screenshot({ path: file })
+  },
+  'shot-run.png': async (file) => {
+    const page = await agents(`#/run/${'a'.repeat(32)}`, { height: 960 })
+    await page.waitForSelector('.agent-card'); await sleep(300)
+    await page.screenshot({ path: file })
+  },
+  'shot-agents-home.png': async (file) => {
+    const page = await agents('#/')
+    await page.waitForSelector('.home-stats a'); await sleep(300)
+    await page.screenshot({ path: file, clip: { x: 0, y: 0, width: 390, height: 300 } })
+  },
+  'shot-agents-settings.png': async (file) => {
+    const page = await agents('#/settings')
+    await page.waitForSelector('form'); await sleep(400)
+    // A clip is measured from the top of the page, not of the screen
+    const top = await page.evaluate(() => [...document.querySelectorAll('.section-title')].find((e) => e.textContent.startsWith('Agents page')).getBoundingClientRect().top + window.scrollY)
+    await page.screenshot({ path: file, clip: { x: 0, y: top - 12, width: 390, height: 330 } })
   },
 
   // ── Slides ──

@@ -25,6 +25,7 @@ Your vault, your conventions. Settings live **in your vault** as `.brain/setting
 | **Slides** | Default theme, colours, page numbers and shape for [slide decks](slides.md) | Default theme, light, no numbers, 16:9 |
 | **Ask button opens** | Which AI the Ask button on a note opens: Claude, ChatGPT or Gemini | Claude |
 | **Ask prompt** | The prompt the Ask button sends (`{path}` is the note) | a neutral prompt |
+| **Agents page (alpha)** | Turns on [Mission control](mission-control.md), where your server offers it | Off |
 
 ## On this device
 
