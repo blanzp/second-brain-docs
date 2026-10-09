@@ -103,6 +103,63 @@ function record(p: string, content: string, author: string, message: string, min
   history.set(p, list)
 }
 
+
+// ── Made-up data for the Agents page (mission control), in the shape the real server returns ──
+let agentsOn = true
+const AGO = (hours: number) => new Date(Date.now() - hours * HOUR).toISOString()
+const RUN_ID = 'a'.repeat(32)
+const demoAgents = () => ({
+  summary: { agents: 7, healthy: 6, needs: 3, problems: 1 },
+  needs: [
+    { kind: 'proposals', text: '7 proposals to tick', detail: 'Report 2026-10-04 · G16–G22', action: 'Review', href: '#/note/Projects/Launch%20Plan.md', at: null },
+    { kind: 'attention', text: 'TARI €221 due 30 Nov', detail: 'from Property manager', action: 'Open', href: '#/note/home/House%20Admin.md', at: AGO(60) },
+    { kind: 'agent', text: "OpenClaw hasn't run", detail: 'expected daily 08:00 · 3 days late', action: 'Details', href: '#/agents/openclaw', at: AGO(72) },
+  ],
+  agents: [
+    { id: 'openclaw', name: 'OpenClaw', schedule: 'daily 08:00', state: 'overdue', lastSeen: AGO(80), due: AGO(8), lateMs: 72 * HOUR },
+    { id: 'claude-code', name: 'Claude Code', schedule: 'on demand', state: 'active', lastSeen: AGO(0.3), run: { run_id: RUN_ID, status: 'open', start: AGO(0.5), tools: 44 } },
+    { id: 'gardener', name: 'Gardener', schedule: 'Sun 07:00', state: 'ok', lastSeen: AGO(100), due: AGO(100), run: { run_id: RUN_ID, status: 'ok', start: AGO(100), end: AGO(99.98), summary: '0 changes, 7 proposals', tools: 31 } },
+    { id: 'lisa', name: 'Lisa', schedule: 'Thu 17:52', state: 'ok', lastSeen: AGO(3), due: AGO(3), run: { run_id: RUN_ID, status: 'ok', start: AGO(3), end: AGO(2.99), summary: 'Posted in the lounge', tools: 6 } },
+    { id: 'property-manager', name: 'Property manager', schedule: 'Mon 08:52', state: 'ok', lastSeen: AGO(60), due: AGO(60), run: { run_id: RUN_ID, status: 'ok', start: AGO(60), end: AGO(59.99), summary: '1 tax notice, already paid', tools: 9 } },
+    { id: 'hermes', name: 'Hermes', schedule: 'on demand', state: 'idle', lastSeen: AGO(44), run: { run_id: RUN_ID, status: 'unreported', start: AGO(44.2), end: AGO(44), tools: 4 } },
+    { id: 'igor', name: 'Igor', schedule: 'on demand', state: 'idle', lastSeen: AGO(170) },
+    { id: 'old-bot', name: 'Old bot', schedule: 'daily 06:00', state: 'off', lastSeen: null },
+  ],
+  unknown: [{ name: 'chatgpt', app: 'chatgpt', lastSeen: AGO(26), tools: 0, commits: 2 }],
+  timeline: [
+    { at: AGO(0.3), agent: 'Claude Code', agent_id: 'claude-code', kind: 'commit', text: 'changed Kafka Tiered Storage and 2 more', detail: 'update: replace section in Kafka Tiered Storage', note: 'tech/Kafka Tiered Storage.md' },
+    { at: AGO(2.99), agent: 'Lisa', agent_id: 'lisa', kind: 'run', text: 'Posted in the lounge', detail: '33s · 6 tool calls · 41k tokens · 1 commit', run_id: RUN_ID, status: 'ok' },
+    { at: AGO(26), agent: 'chatgpt', kind: 'commit', text: 'changed Tuscany Wine Notes', detail: 'update: append to Tuscany Wine Notes', note: 'travel/Tuscany Wine Notes.md' },
+    { at: AGO(30), agent: 'Hermes', agent_id: 'hermes', kind: 'run', text: 'Could not reach the calendar', detail: '12s · 3 tool calls', run_id: RUN_ID, status: 'error' },
+    { at: AGO(44), agent: 'Hermes', agent_id: 'hermes', kind: 'run', text: '4 tool calls, no report', detail: '720s · 4 tool calls', run_id: RUN_ID, status: 'unreported' },
+  ],
+  range: 'week',
+  registryFolder: 'Agents/Registry',
+  registryProblems: [],
+})
+const demoAgent = (id: string) => {
+  const a = demoAgents().agents.find((x) => x.id === id)
+  if (!a) return null
+  return {
+    card: { id: a.id, name: a.name, description: id === 'lisa' ? 'Weekly Agent Lounge check-in, playful persona' : 'An example agent', host: 'claude.ai scheduled task', apps: ['claude'], schedule: a.schedule, timezone: 'America/New_York', model: 'claude-sonnet-5-5', skills: ['lounge-post'], enabled: a.state !== 'off', note: 'travel/Weekend in Siena.md' },
+    state: a.state, lastSeen: a.lastSeen, due: (a as { due?: string }).due,
+    runs: [
+      { run_id: RUN_ID, status: 'ok', start: AGO(3), end: AGO(2.99), summary: 'Posted in the lounge', tools: 6, commits: 1, notes: 1 },
+      { run_id: RUN_ID, status: 'error', start: AGO(171), end: AGO(170.99), error: 'The lounge note was locked', tools: 2, commits: 0, notes: 1 },
+      { run_id: RUN_ID, status: 'unreported', start: AGO(339), end: AGO(338.9), tools: 5, commits: 1, notes: 2 },
+    ],
+  }
+}
+const demoRun = () => ({
+  run: { run_id: RUN_ID, agent: 'Lisa', agent_name: 'Lisa', agent_id: 'lisa', app: 'claude', start: AGO(3), last: AGO(2.991), end: AGO(2.99), status: 'partial', summary: 'Posted in the lounge, but one link failed', error: 'A link to "Agent Lounge#Thursday" would not resolve', model: 'claude-sonnet-5-5', input_tokens: 41200, output_tokens: 880, needs_attention: [{ text: 'Reply to Igor in the lounge', note: 'travel/Weekend in Siena.md' }], tools: 4, errors: 1, commits: ['a73eeb1'], notes: ['travel/Weekend in Siena.md'] },
+  spans: [
+    { tool: 'vault_guide', start: AGO(3), ms: 12, status: 'ok', note: null, commit: null },
+    { tool: 'read_note', start: AGO(2.998), ms: 48, status: 'ok', note: 'travel/Weekend in Siena.md', commit: null },
+    { tool: 'add_link', start: AGO(2.995), ms: 30, status: 'error', note: 'travel/Weekend in Siena.md', commit: null },
+    { tool: 'append_to_note', start: AGO(2.992), ms: 540, status: 'ok', note: 'travel/Weekend in Siena.md', commit: 'a73eeb1' },
+  ],
+})
+
 const json = (res: http.ServerResponse, code: number, data: unknown) => {
   res.writeHead(code, { 'Content-Type': 'application/json' })
   res.end(JSON.stringify(data))
@@ -112,16 +169,20 @@ const render = async (p: string, content: string) => renderNote(content, { noteP
 async function api(name: string, method: string, query: URLSearchParams, body: Record<string, unknown>): Promise<[number, unknown]> {
   const p = query.get('path') ?? ''
   const { settings, problems } = vault.loadSettings()
+  // The Agents page: made-up answers (see demoAgents above); ?off=1 on /demo/agents turns the feature off
+  if (method === 'GET' && name === 'agents') return agentsOn ? [200, { ...demoAgents(), range: query.get('range') ?? 'week' }] : [404, { error: 'Not found' }]
+  if (method === 'GET' && name.startsWith('agents/')) { const a = agentsOn ? demoAgent(decodeURIComponent(name.slice(7))) : null; return a ? [200, a] : [404, { error: 'No such agent' }] }
+  if (method === 'GET' && name.startsWith('runs/')) return agentsOn ? [200, demoRun()] : [404, { error: 'Not found' }]
   switch (`${method} ${name}`) {
     case 'GET me':
-      return [200, { login: 'alice', repo: 'alice/second-brain', appName: 'Unibrain', archiveFolder: settings.archiveFolder, inboxFolder: 'inbox', askProvider: settings.askProvider, askClaudePrompt: settings.askClaudePrompt, timeZone: settings.timeZone, timeZoneSaved: true, admin: false }]
+      return [200, { login: 'alice', repo: 'alice/second-brain', appName: 'Unibrain', archiveFolder: settings.archiveFolder, inboxFolder: 'inbox', askProvider: settings.askProvider, askClaudePrompt: settings.askClaudePrompt, timeZone: settings.timeZone, timeZoneSaved: true, admin: false, missionControl: { available: true, enabled: agentsOn } }]
     case 'GET settings':
       return [200, { settings: { ...settings, inboxFolder: 'inbox' }, defaults: vault.defaults, problems, serverAppName: 'Unibrain', folders: await vault.folders(), timeZones: Intl.supportedValuesOf('timeZone') }]
     case 'GET recent': {
       const files = (await vault.files()).filter((f) => /\.md$/i.test(f) && !vault.inArchive(f))
       const todos = (await vault.taskBoard()).notes.reduce((n, note) => n + note.tasks.length, 0)
       if (query.get('nocounts') === '1') return [200, { notes: recent }] // an older saved reply, for checking the page copes
-      return [200, { notes: recent, favorites: settings.favorites.map((f) => ({ path: f, title: path.posix.basename(f, '.md') })), counts: { notes: files.length, todos } }]
+      return [200, { notes: recent, favorites: settings.favorites.map((f) => ({ path: f, title: path.posix.basename(f, '.md') })), counts: { notes: files.length, todos }, ...(agentsOn ? { agents: query.get('agents') === 'problem' ? { text: '1 agent overdue or failed', level: 'problem' } : query.get('agents') === 'ok' ? { text: '7 agents OK', level: 'ok' } : { text: '3 need you', level: 'attention' } } : {}) }]
     }
     case 'POST favorite':
       return [200, { favorite: (await vault.setFavorite(String(body.path), body.on === true)).includes(String(body.path)) }]
@@ -205,6 +266,10 @@ async function api(name: string, method: string, query: URLSearchParams, body: R
 
 /** Things only the screenshot script asks for: start over, or have an "agent" write a note. */
 async function demo(name: string, body: Record<string, unknown>): Promise<[number, unknown]> {
+  if (name === 'agents') {
+    agentsOn = body.on !== false
+    return [200, { on: agentsOn }]
+  }
   if (name === 'reset') {
     reset()
     return [200, { ok: true }]
