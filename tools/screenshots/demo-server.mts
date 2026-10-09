@@ -117,8 +117,12 @@ async function api(name: string, method: string, query: URLSearchParams, body: R
       return [200, { login: 'alice', repo: 'alice/second-brain', appName: 'Unibrain', archiveFolder: settings.archiveFolder, inboxFolder: 'inbox', askProvider: settings.askProvider, askClaudePrompt: settings.askClaudePrompt, timeZone: settings.timeZone, timeZoneSaved: true, admin: false }]
     case 'GET settings':
       return [200, { settings: { ...settings, inboxFolder: 'inbox' }, defaults: vault.defaults, problems, serverAppName: 'Unibrain', folders: await vault.folders(), timeZones: Intl.supportedValuesOf('timeZone') }]
-    case 'GET recent':
-      return [200, { notes: recent, favorites: settings.favorites.map((f) => ({ path: f, title: path.posix.basename(f, '.md') })) }]
+    case 'GET recent': {
+      const files = (await vault.files()).filter((f) => /\.md$/i.test(f) && !vault.inArchive(f))
+      const todos = (await vault.taskBoard()).notes.reduce((n, note) => n + note.tasks.length, 0)
+      if (query.get('nocounts') === '1') return [200, { notes: recent }] // an older saved reply, for checking the page copes
+      return [200, { notes: recent, favorites: settings.favorites.map((f) => ({ path: f, title: path.posix.basename(f, '.md') })), counts: { notes: files.length, todos } }]
+    }
     case 'POST favorite':
       return [200, { favorite: (await vault.setFavorite(String(body.path), body.on === true)).includes(String(body.path)) }]
     // Made up like the rest of the history: a note with recorded versions shows its real last change,

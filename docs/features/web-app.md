@@ -24,6 +24,7 @@ The web app is where you **read, review and write**: what your agents saved, and
 ## Getting around
 
 - A **tab bar** at the bottom: Home, Folders, New, Tasks, Offline.
+- **Home** starts with one line of numbers, how many notes and open todos you have. Tap a number to go to Folders or Tasks.
 - **Pull down** at the top of any screen to refresh it.
 - **Back keeps your place:** your scroll position, search results and expanded lists.
 - **Back-to-top** and **jump-to-bottom** buttons on long pages, handy for logs whose newest entries are at the end.
