@@ -54,18 +54,18 @@ Open **⚙ Settings**, scroll to **Agents page (alpha)**, choose **On** and save
 <figcaption>The switch, in Settings</figcaption>
 </figure>
 <figure markdown>
-![The home screen's line of counts with a third figure: 3 need you](../assets/images/shot-agents-home.png)
+![The home screen's row of pills with a third one: Agents: 3 for you](../assets/images/shot-agents-home.png)
 <figcaption>Home gains a figure for your agents</figcaption>
 </figure>
 </div>
 
-The home screen's line of counts gains a third figure, which opens the page:
+The home screen's row of pills gains a third one, which opens the page:
 
 | It says | Meaning |
 |---|---|
-| *7 agents OK* | Nothing needs you |
-| *3 need you* (amber) | Something is in the Needs you list |
-| *1 agent overdue or failed* (red) | An agent missed its time, or reported a failure |
+| *Agents: OK* | Nothing needs you |
+| *Agents: 3 for you* (amber) | Three items are in the Needs you list |
+| *Agents: 1 failing* (red) | An agent missed its time, or reported a failure |
 
 Turning it **off** hides the page and the figure and stops the recording at once. What was recorded is kept, and shown again if you turn it back on. **Delete Agents data** removes it for good.
 
