@@ -192,9 +192,13 @@ Newest first, each with one place to go. Nothing is dismissed by hand: an item g
 - **What an agent asked you to look at**, from its last report. Replaced by its next run.
 - **Rollbacks** the [safety net](safety.md) caught in the last week. Ticking or unticking a task in the app is never counted as one.
 
+### Scheduled next
+
+Below **Needs you**, the three scheduled agents that are due soonest, each with its next time: *Tomorrow 07:00 · in 14 h*. Times are shown in your device's time zone. Agents that run on demand, or are switched off, aren't listed.
+
 ### Today, this week, 30 days
 
-The buttons at the top choose how far back to look. They change two things:
+The buttons above the agents list choose how far back to look. They change two things:
 
 - **The timeline** at the bottom: every finished run, and every change an agent made outside a recorded run. Its heading says how many there are, such as *This week · 239 events*. The newest 60 are shown; **Show 60 more** brings the next ones, up to the newest 300.
 - **The small count under each agent's state**: its runs in that time, or its changes if it made no recorded run.
