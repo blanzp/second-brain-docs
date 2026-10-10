@@ -175,6 +175,16 @@ const shots = {
     await page.waitForSelector('.content table'); await sleep(1500)
     await page.screenshot({ path: file })
   },
+  'shot-desktop-home.png': async (file) => {
+    await fetch(`${ORIGIN}/demo/reset`, { method: 'POST' })
+    await fetch(`${ORIGIN}/demo/agents`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ on: true }) })
+    const page = await (await browser.createBrowserContext()).newPage()
+    await page.setCacheEnabled(false)
+    await page.setViewport({ width: 1280, height: 800, deviceScaleFactor: 2 })
+    await page.goto(`${ORIGIN}/app/#/`, { waitUntil: 'networkidle0' })
+    await page.waitForSelector('.home-cols.both'); await sleep(600)
+    await page.screenshot({ path: file })
+  },
   'shot-desktop-editor.png': async (file) => {
     const page = await desktop(`#/edit/${SIENA}`)
     await page.waitForSelector('.cm-content'); await sleep(800)

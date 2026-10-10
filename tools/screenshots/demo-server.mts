@@ -183,7 +183,7 @@ async function api(name: string, method: string, query: URLSearchParams, body: R
       const files = (await vault.files()).filter((f) => /\.md$/i.test(f) && !vault.inArchive(f))
       const todos = (await vault.taskBoard()).notes.reduce((n, note) => n + note.tasks.length, 0)
       if (query.get('nocounts') === '1') return [200, { notes: recent }] // an older saved reply, for checking the page copes
-      return [200, { notes: recent, favorites: settings.favorites.map((f) => ({ path: f, title: path.posix.basename(f, '.md') })), counts: { notes: files.length, todos }, ...(agentsOn ? { agents: query.get('agents') === 'problem' ? { text: 'Agents: 1 failing', level: 'problem' } : query.get('agents') === 'ok' ? { text: 'Agents: OK', level: 'ok' } : { text: 'Agents: 3 for you', level: 'attention' } } : {}) }]
+      return [200, { notes: recent, favorites: settings.favorites.map((f) => ({ path: f, title: path.posix.basename(f, '.md') })), counts: { notes: files.length, todos }, ...(agentsOn ? { agents: query.get('agents') === 'problem' ? { text: 'Agents: 1 failing', level: 'problem', count: 1 } : query.get('agents') === 'ok' ? { text: 'Agents: OK', level: 'ok', count: 0 } : { text: 'Agents: 3 for you', level: 'attention', count: 3 } } : {}) }]
     }
     case 'POST favorite':
       return [200, { favorite: (await vault.setFavorite(String(body.path), body.on === true)).includes(String(body.path)) }]

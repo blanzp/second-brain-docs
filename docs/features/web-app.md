@@ -33,13 +33,16 @@ The web app is where you **read, review and write**: what your agents saved, and
 
 In a wide window (about 1000 pixels and up: a laptop, or a tablet on its side) the app rearranges itself:
 
-- **The tab bar becomes a sidebar** down the left, with Home, Folders, New, Tasks and Offline, plus Agents (if [mission control](mission-control.md) is on) and Settings.
+- **The tab bar becomes a sidebar** down the left. At the top: a **New note** button and a **search box** that works from any screen (results appear on Home; Esc clears it). Then Home, Tasks, Agents (if [mission control](mission-control.md) is on, with a count of what is waiting) and Offline, your **favorites**, and your **folders as a tree** you can open and close. Settings is at the bottom.
+- **Home shows what wants your attention.** Beside the recently changed notes: the agents' **Needs you** items, and tasks that are overdue or **due within a week**.
 - **Less repetition.** Home, Folders, Tasks and Settings show a plain heading instead of a bar with a back arrow, and a note's title appears once.
 - **Lists keep a comfortable width**: folders become a grid of cards, and Home puts your favorites in a column beside the recent notes.
 - **Pages are wider.** In a note, text keeps a comfortable line length while tables, code, diagrams and pictures use the full width, so wide tables stop scrolling sideways.
 - **Long notes get an outline.** From about 1200 pixels wide, a note's headings are listed beside it; click one to jump there, and the one you are reading is marked.
 - **A note's actions move into its bar**: Ask, Share, Organize and History sit at the top right, beside the star and the pencil.
 - **The editor can show a preview beside the text**: see [Writing](editor.md#on-a-computer).
+
+![Home in a wide window: the sidebar with search, favorites and folders; recent notes; what needs you and what is due](../assets/images/shot-desktop-home.png){ .shot-wide }
 
 ![A note in a wide window: the sidebar on the left, the note beside it](../assets/images/shot-desktop.png){ .shot-wide }
 
