@@ -111,14 +111,14 @@ const RUN_ID = 'a'.repeat(32)
 const demoAgents = () => ({
   summary: { agents: 7, healthy: 6, needs: 3, problems: 1 },
   needs: [
-    { kind: 'proposals', text: '7 proposals to approve or reject', detail: 'Report 2026-10-04 · G16–G22', action: 'Review', href: '#/note/Projects/Launch%20Plan.md', at: null },
+    { kind: 'proposals', text: '3 proposals to approve or reject', detail: 'Tidy-up 2026-10-04 · T13–T16', action: 'Review', href: '#/note/reports/Tidy-up%202026-10-04.md', at: null },
     { kind: 'attention', text: 'Car insurance renews 30 Nov', detail: 'from Bills watcher', action: 'Open', href: '#/note/home/House%20Admin.md', at: AGO(60) },
     { kind: 'agent', text: "OpenClaw hasn't run", detail: 'expected daily 08:00 · 3 days late', action: 'Details', href: '#/agents/openclaw', at: AGO(72) },
   ],
   agents: [
     { id: 'openclaw', name: 'OpenClaw', schedule: 'daily 08:00', state: 'overdue', lastSeen: AGO(80), due: AGO(8), lateMs: 72 * HOUR },
     { id: 'claude-code', name: 'Claude Code', schedule: 'on demand', state: 'active', lastSeen: AGO(0.3), run: { run_id: RUN_ID, status: 'open', start: AGO(0.5), tools: 44 } },
-    { id: 'gardener', name: 'Gardener', schedule: 'Sun 07:00', state: 'ok', lastSeen: AGO(100), due: AGO(100), run: { run_id: RUN_ID, status: 'ok', start: AGO(100), end: AGO(99.98), summary: '0 changes, 7 proposals', tools: 31 } },
+    { id: 'weekly-tidy-up', name: 'Weekly tidy-up', schedule: 'Sun 07:00', state: 'ok', lastSeen: AGO(100), due: AGO(100), run: { run_id: RUN_ID, status: 'ok', start: AGO(100), end: AGO(99.98), summary: '1 change, 3 proposals', tools: 31 } },
     { id: 'news-digest', name: 'News digest', schedule: 'daily 07:30', state: 'ok', lastSeen: AGO(3), due: AGO(3), run: { run_id: RUN_ID, status: 'ok', start: AGO(3), end: AGO(2.99), summary: '5 stories saved to Reading List', tools: 6 } },
     { id: 'bills-watcher', name: 'Bills watcher', schedule: 'Mon 08:52', state: 'ok', lastSeen: AGO(60), due: AGO(60), run: { run_id: RUN_ID, status: 'ok', start: AGO(60), end: AGO(59.99), summary: '1 new bill, due 30 Nov', tools: 9 } },
     { id: 'hermes', name: 'Hermes', schedule: 'on demand', state: 'idle', lastSeen: AGO(44), run: { run_id: RUN_ID, status: 'unreported', start: AGO(44.2), end: AGO(44), tools: 4 } },

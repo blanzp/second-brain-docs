@@ -188,7 +188,7 @@ What `report_run` takes:
 Newest first, each with one place to go. Nothing is dismissed by hand: an item goes away when the thing behind it is dealt with. The **?** beside the title says how, in the app.
 
 - **Agents that are overdue or failed.** Clears when the agent next runs successfully.
-- **Proposals to approve or reject:** unanswered lines such as `- [ ] **G16** File the inbox notes` in notes tagged `gardener`. Open the report and tick a proposal to approve it, or tap **Reject** beside it to turn it down for good. Rejecting writes `- [-]`, shown crossed out with an **Undo** button. A proposal repeated in several reports is listed once, under the newest, and one answer anywhere counts for all of them. See [a weekly tidy-up agent](../guides/multi-agent.md#3-a-weekly-tidy-up-agent-with-checkbox-approvals).
+- **[Proposals](proposals.md) to approve or reject:** unanswered lines such as `- [ ] **T16** File the inbox notes` in notes tagged `proposals`. Open the report and tick a proposal to approve it, or tap **Reject** beside it to turn it down for good. A proposal repeated in several reports is listed once, under the newest, and one answer anywhere counts for all of them.
 - **What an agent asked you to look at**, from its last report. Replaced by its next run.
 - **Rollbacks** the [safety net](safety.md) caught in the last week. Ticking or unticking a task in the app is never counted as one.
 
@@ -236,7 +236,7 @@ The switch and four values are in `.brain/settings.json`, under `missionControl`
 |---|---|---|
 | `enabled` | The switch | `false` |
 | `registryFolder` | The folder of agent notes | `Agents/Registry` |
-| `proposalTag` | The tag of notes whose unticked proposals count as waiting for you | `gardener` |
+| `proposalTag` | The tag of notes whose unanswered [proposals](proposals.md) count as waiting for you | `proposals` |
 | `retentionDays` | Days of recordings kept | `30` |
 | `runIdleClose` | A run with no tool call for this long is closed as *No report* | `2h` |
 

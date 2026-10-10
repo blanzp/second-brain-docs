@@ -28,4 +28,4 @@ Start a new chat so the assistant picks it up. From then on:
 
 - **No name, no problem.** An agent that doesn't sign (or forgets) shows under its app's name, as before.
 - **Names are labels, not proof.** The agent reports its own name, so use it to tell your agents apart, not as security. Access is always limited to your own vault.
-- **Claude Code** is labelled by the name you gave the connection (`claude mcp add … gardener …` shows as `claude-code-gardener`), so give each job its own.
+- **Claude Code** is labelled by the name you gave the connection (`claude mcp add … tidy-up …` shows as `claude-code-tidy-up`), so give each job its own.

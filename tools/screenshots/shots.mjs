@@ -159,6 +159,12 @@ const shots = {
     await page.waitForSelector('.agent-row'); await sleep(300)
     await page.screenshot({ path: file })
   },
+  // Proposals: an agent's report, with one approved and applied, one rejected, three waiting
+  'shot-proposals.png': async (file) => {
+    const page = await open('#/note/reports/Tidy-up%202026-10-04.md', { height: 900 })
+    await page.waitForSelector('.task-reject'); await sleep(300)
+    await page.screenshot({ path: file })
+  },
   'shot-agents-timeline.png': async (file) => {
     const page = await agents('#/agents')
     await page.waitForSelector('.timeline'); await sleep(300)

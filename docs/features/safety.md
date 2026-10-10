@@ -13,7 +13,7 @@ Every change, by you or any agent, is a **Git commit in your own repo**:
 ```text
 Igor (claude, brain-mcp)      note: add Kafka tiered storage (igor via claude)
 web (brain-mcp)               update: check task in travel/Tuscany Trip.md (web)
-claude-code-gardener          organize: archive Projects/old-idea.md (claude-code-gardener)
+claude-code-tidy-up           organize: archive Projects/old-idea.md (claude-code-tidy-up)
 ```
 
 - The **author** says which app made the change, and which named agent if it gave one.

@@ -14,6 +14,7 @@ Notes are plain Markdown following **Obsidian's conventions**, so they're readab
 | `#tag`, `#trip/italy` | a tag (tap it to see all notes with it) |
 | `> [!tip] Title` then `> text` | a callout: note, tip, warning, danger, question, example, quote, success, bug… `[!tip]-` starts collapsed |
 | `- [ ] task 📅 2026-10-05` | a todo with a due date |
+| `- [-] task` | a rejected task, crossed out (see [Proposals](../features/proposals.md)) |
 | `==highlight==` | highlighted text |
 | `%%comment%%` | a comment hidden when reading |
 | `[^1]` and `[^1]: text` | a footnote |

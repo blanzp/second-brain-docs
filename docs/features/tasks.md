@@ -28,6 +28,8 @@ Checkboxes mean two things, and Unibrain keeps them apart:
 
 Which tags count as lists is up to you, in [Vault settings](settings.md).
 
+A third kind of checkbox is an agent's **proposal**, waiting for your yes or no. Those have a page of their own: [Proposals](proposals.md).
+
 ## Due dates
 
 Add a due date in the Obsidian Tasks format, `📅 YYYY-MM-DD`, at the end of the line. Overdue and due-today items get red and orange badges, and notes with the soonest due task come first.

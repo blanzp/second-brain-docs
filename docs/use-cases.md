@@ -68,10 +68,10 @@ Give each agent a job and a name, and let them work in the same vault:
 
 - **A research librarian** (a Claude Project named Igor) that files findings carefully.
 - **A brainstorming partner** that turns conversations into plans.
-- **A weekly tidy-up agent** that checks for broken links, duplicates and misfiled notes, and writes its *proposals* to a report. You approve each one with a checkbox on your phone; only then does it act.
+- **A weekly tidy-up agent** that checks for broken links, duplicates and misfiled notes, and writes its [proposals](features/proposals.md) to a report. You tick or reject each one on your phone; only then does it act.
 - **An always-on assistant** (Hermes) that you message from Telegram.
 
-Every change shows who made it: `Igor (claude)`, `claude-code-gardener`, or whatever name you gave Hermes. If something looks wrong, the history shows exactly what happened, and the safety net flags anything that rolled notes back. See [Run a team of agents](guides/multi-agent.md).
+Every change shows who made it: `Igor (claude)`, `claude-code-tidy-up`, or whatever name you gave Hermes. If something looks wrong, the history shows exactly what happened, and the safety net flags anything that rolled notes back. See [Run a team of agents](guides/multi-agent.md).
 
 ## Brainstorm, then keep the good parts
 

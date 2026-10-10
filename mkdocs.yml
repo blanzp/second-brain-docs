@@ -102,6 +102,7 @@ nav:
       - The web app: features/web-app.md
       - Writing: features/editor.md
       - Tasks: features/tasks.md
+      - Proposals: features/proposals.md
       - Offline reading: features/offline.md
       - Diagrams and math: features/diagrams.md
       - Slides: features/slides.md

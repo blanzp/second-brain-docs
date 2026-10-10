@@ -14,7 +14,7 @@ Unibrain is built for several agents writing to one vault, safely. Here's a setu
 | **Brainstorm Partner** | a Claude Project | turns conversations into plans and decisions |
 | **Coding agent** | Claude Code | keeps project specs, decisions and diagrams current |
 | **Hermes** | your server, Telegram | quick captures, briefings, starting other jobs |
-| **Gardener** | Claude Code on a timer | weekly tidy-up proposals |
+| **Tidy-up agent** | Claude Code on a timer | weekly tidy-up proposals |
 
 Each one [signs its writes](named-agents.md), so you always know who did what.
 
@@ -27,14 +27,14 @@ Put the rules all agents share in [`AGENTS.md`](agents-md.md). Two that work esp
 
 ## 3. A weekly tidy-up agent with checkbox approvals
 
-A scheduled agent keeps the vault clean without ever surprising you:
+A scheduled agent can keep the vault clean without ever surprising you, using [Proposals](../features/proposals.md):
 
 1. **Sunday morning**, it runs (Claude Code on a timer, for example), checks vault health, tags and folders, and writes a **report note** of numbered proposals, each a checkbox:
-   `- [ ] **G3** Move "Rome restaurants" from inbox/ to travel/italy/`
-2. **You tick** the proposals you like, on your phone, and tap **Reject** on the ones you never want (the line becomes `- [-]`).
-3. **Its next run applies only the ticked ones**, signs every change, drops the rejected ones for good, and carries the rest forward. Tell the agent in its instructions that `- [-]` means rejected.
+   `- [ ] **T3** Move "Rome restaurants" from inbox/ to travel/italy/`
+2. **You tick** the proposals you like, on your phone, and tap **Reject** on the ones you never want.
+3. **Its next run applies only the ticked ones**, signs every change, drops the rejected ones for good, and carries the rest forward.
 
-Tag its reports (for example `#gardener`) and add that tag under **Not todos** in [Vault settings](../features/settings.md), so its proposals don't clutter your todo list.
+This agent is one you set up, not something Unibrain runs for you. The [Proposals](../features/proposals.md#use-case-1-a-weekly-tidy-up) page has the full instructions to give it, and a second example for bills.
 
 ## 4. Review on your phone
 

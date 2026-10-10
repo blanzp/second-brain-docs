@@ -26,6 +26,10 @@ title: Features
 
     Every todo from every note, with due dates, ticked off in place.
 
+-   :material-check-decagram-outline: __[Proposals](proposals.md)__
+
+    Let an agent suggest changes as checkboxes. Tick to approve, reject the rest; it does only what you approved.
+
 -   :material-cloud-download-outline: __[Offline reading](offline.md)__
 
     Keep whole folders on your phone, with their images and diagrams.

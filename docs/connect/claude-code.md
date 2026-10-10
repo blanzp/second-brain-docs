@@ -13,7 +13,7 @@ claude mcp add --transport http --scope user unibrain https://unibrain.dev/mcp
 Restart Claude Code, run **`/mcp`**, select **unibrain → Authenticate**, and sign in with GitHub.
 
 !!! tip "The name you choose shows up in your history"
-    Claude Code labels its changes with the name you give the connection: added as `unibrain`, its commits show as `claude-code-unibrain`. Use a different name per machine or per job (for example `gardener` for a scheduled tidy-up agent) to tell them apart.
+    Claude Code labels its changes with the name you give the connection: added as `unibrain`, its commits show as `claude-code-unibrain`. Use a different name per machine or per job (for example `tidy-up` for a scheduled tidy-up agent) to tell them apart.
 
 ## Great uses
 
