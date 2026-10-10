@@ -60,7 +60,16 @@
 
 /* Cards and tables on white, like the app's lists */
 .md-typeset .grid.cards > ul > li, .md-typeset .grid > .card { background: var(--surface); border-color: var(--md-default-fg-color--lightest); }
-.md-typeset .grid.cards > ul > li:hover { border-color: var(--brand); box-shadow: 0 4px 16px rgb(0 0 0 / 0.06); }
+/* A card is one big link: its title link is stretched over the whole card, so a click anywhere on it works.
+   Other links further down the card sit above that layer and keep their own targets. */
+.md-typeset .grid.cards > ul > li { position: relative; }
+.md-typeset .grid.cards > ul > li > p:first-child a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.md-typeset .grid.cards > ul > li > :not(:first-child) a { position: relative; z-index: 1; }
+.md-typeset .grid.cards > ul > li:has(a) { cursor: pointer; }
+.md-typeset .grid.cards > ul > li:has(a):hover { border-color: var(--brand); box-shadow: 0 4px 16px rgb(0 0 0 / 0.06); }
+.md-typeset .grid.cards > ul > li:has(> p:first-child a:focus-visible) { outline: 2px solid var(--brand); outline-offset: 2px; }
+/* A card that leads nowhere doesn't light up */
+.md-typeset .grid.cards > ul > li:not(:has(a)):hover { border-color: var(--md-default-fg-color--lightest); box-shadow: none; }
 .md-typeset table:not([class]) { background: var(--surface); border-color: var(--md-default-fg-color--lightest); }
 .md-typeset .admonition, .md-typeset details { background: var(--surface); }
 .md-footer { background-color: var(--md-default-fg-color); }
