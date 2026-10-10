@@ -185,12 +185,12 @@ What `report_run` takes:
 
 ### Needs you
 
-Newest first, each with one place to go:
+Newest first, each with one place to go. Nothing is dismissed by hand: an item goes away when the thing behind it is dealt with. The **?** beside the title says how, in the app.
 
-- **Agents that are overdue or failed.**
-- **Proposals waiting for your tick:** unticked lines such as `- [ ] **G16** File the inbox notes` in notes tagged `gardener`. See [a weekly tidy-up agent](../guides/multi-agent.md#3-a-weekly-tidy-up-agent-with-checkbox-approvals).
-- **What an agent asked you to look at**, from its last report.
-- **Rollbacks** the [safety net](safety.md) caught in the last week.
+- **Agents that are overdue or failed.** Clears when the agent next runs successfully.
+- **Proposals to approve or reject:** unanswered lines such as `- [ ] **G16** File the inbox notes` in notes tagged `gardener`. Open the report and tick a proposal to approve it, or tap **Reject** beside it to turn it down for good. Rejecting writes `- [-]`, shown crossed out with an **Undo** button. A proposal repeated in several reports is listed once, under the newest, and one answer anywhere counts for all of them. See [a weekly tidy-up agent](../guides/multi-agent.md#3-a-weekly-tidy-up-agent-with-checkbox-approvals).
+- **What an agent asked you to look at**, from its last report. Replaced by its next run.
+- **Rollbacks** the [safety net](safety.md) caught in the last week. Ticking or unticking a task in the app is never counted as one.
 
 ### An agent, and a run
 

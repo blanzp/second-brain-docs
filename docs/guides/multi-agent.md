@@ -31,8 +31,8 @@ A scheduled agent keeps the vault clean without ever surprising you:
 
 1. **Sunday morning**, it runs (Claude Code on a timer, for example), checks vault health, tags and folders, and writes a **report note** of numbered proposals, each a checkbox:
    `- [ ] **G3** Move "Rome restaurants" from inbox/ to travel/italy/`
-2. **You tick** the proposals you like, on your phone.
-3. **Its next run applies only the ticked ones**, signs every change, and carries the rest forward.
+2. **You tick** the proposals you like, on your phone, and tap **Reject** on the ones you never want (the line becomes `- [-]`).
+3. **Its next run applies only the ticked ones**, signs every change, drops the rejected ones for good, and carries the rest forward. Tell the agent in its instructions that `- [-]` means rejected.
 
 Tag its reports (for example `#gardener`) and add that tag under **Not todos** in [Vault settings](../features/settings.md), so its proposals don't clutter your todo list.
 
@@ -42,4 +42,4 @@ Tag its reports (for example `#gardener`) and add that tag under **Not todos** i
 - **Usage stats** shows commits per agent over time.
 - Ask any agent: *"What did each agent change this week? Anything that needs my attention?"*
 - The **safety net** flags rollbacks and deletions, whoever caused them.
-- **[Mission control](../features/mission-control.md) (alpha, optional)** puts it on one page: which agent ran, which is overdue, and what is waiting for your tick.
+- **[Mission control](../features/mission-control.md) (alpha, optional)** puts it on one page: which agent ran, which is overdue, and what is waiting for your answer.

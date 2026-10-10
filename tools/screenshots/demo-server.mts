@@ -111,7 +111,7 @@ const RUN_ID = 'a'.repeat(32)
 const demoAgents = () => ({
   summary: { agents: 7, healthy: 6, needs: 3, problems: 1 },
   needs: [
-    { kind: 'proposals', text: '7 proposals to tick', detail: 'Report 2026-10-04 · G16–G22', action: 'Review', href: '#/note/Projects/Launch%20Plan.md', at: null },
+    { kind: 'proposals', text: '7 proposals to approve or reject', detail: 'Report 2026-10-04 · G16–G22', action: 'Review', href: '#/note/Projects/Launch%20Plan.md', at: null },
     { kind: 'attention', text: 'Car insurance renews 30 Nov', detail: 'from Bills watcher', action: 'Open', href: '#/note/home/House%20Admin.md', at: AGO(60) },
     { kind: 'agent', text: "OpenClaw hasn't run", detail: 'expected daily 08:00 · 3 days late', action: 'Details', href: '#/agents/openclaw', at: AGO(72) },
   ],
@@ -238,7 +238,7 @@ async function api(name: string, method: string, query: URLSearchParams, body: R
       return [200, { html: r.html, deck: r.deck }]
     }
     case 'POST task': {
-      await vault.setTask(String(body.path), String(body.text), Boolean(body.done), Number(body.line))
+      await vault.setTask(String(body.path), String(body.text), body.done === 'rejected' ? 'rejected' : Boolean(body.done), Number(body.line))
       const content = await vault.read(String(body.path))
       return [200, { content, hash: sha(content) }]
     }
