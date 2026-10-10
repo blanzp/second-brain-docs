@@ -192,6 +192,15 @@ Newest first, each with one place to go. Nothing is dismissed by hand: an item g
 - **What an agent asked you to look at**, from its last report. Replaced by its next run.
 - **Rollbacks** the [safety net](safety.md) caught in the last week. Ticking or unticking a task in the app is never counted as one.
 
+### Today, this week, 30 days
+
+The buttons at the top choose how far back to look. They change two things:
+
+- **The timeline** at the bottom: every finished run, and every change an agent made outside a recorded run. Its heading says how many there are, such as *This week · 239 events*. The newest 60 are shown; **Show 60 more** brings the next ones, up to the newest 300.
+- **The small count under each agent's state**: its runs in that time, or its changes if it made no recorded run.
+
+The three tiles, **Needs you** and each agent's state always describe right now, whichever button is on.
+
 ### An agent, and a run
 
 Tap an agent for what its note says and its last twenty runs. Tap a run for its tool calls in order and the notes it touched.
