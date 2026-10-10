@@ -87,6 +87,8 @@
 .shots figure { margin: 0; max-width: 240px; flex: 1 1 200px; }
 .shots img { border-radius: 18px; border: 1px solid var(--md-default-fg-color--lightest); box-shadow: 0 8px 24px rgb(0 0 0 / 0.12); }
 .shots figcaption { font-size: 0.75rem; opacity: 0.75; text-align: center; margin-top: 0.4rem; }
+/* A screenshot of a computer-sized window */
+.shot-wide { display: block; margin: 1rem auto; border-radius: 10px; border: 1px solid var(--md-default-fg-color--lightest); box-shadow: 0 8px 24px rgb(0 0 0 / 0.12); }
 
 /* Compare table: tick and cross colors */
 .md-typeset .yes { color: #4f7a35; font-weight: 700; }

@@ -29,6 +29,18 @@ The web app is where you **read, review and write**: what your agents saved, and
 - **Back keeps your place:** your scroll position, search results and expanded lists.
 - **Back-to-top** and **jump-to-bottom** buttons on long pages, handy for logs whose newest entries are at the end.
 
+## On a computer
+
+In a wide window (about 1000 pixels and up: a laptop, or a tablet on its side) the app rearranges itself:
+
+- **The tab bar becomes a sidebar** down the left, with Home, Folders, New, Tasks and Offline, plus Agents (if [mission control](mission-control.md) is on) and Settings.
+- **Pages are wider.** In a note, text keeps a comfortable line length while tables, code, diagrams and pictures use the full width, so wide tables stop scrolling sideways.
+- **The editor can show a preview beside the text**: see [Writing](editor.md#on-a-computer).
+
+![A note in a wide window: the sidebar on the left, the note beside it](../assets/images/shot-desktop.png){ .shot-wide }
+
+In Safari on a Mac, **File > Add to Dock** gives Unibrain its own window and Dock icon. Make the window narrower and it goes back to the phone layout.
+
 ## Search
 
 - Words, `#tags`, or both: `#italy wine` finds notes tagged *italy* that mention *wine*. Nested tags count.

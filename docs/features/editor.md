@@ -91,6 +91,14 @@ Tap 📷 to take a photo or choose one from your library. On a computer you can 
 - The picture is saved in an `attachments` folder next to the note and appears where your cursor was.
 - PNG, JPEG, GIF, WebP and SVG, up to 10 MB.
 
+## On a computer
+
+In a wide window the editor uses the room: the writing column is wider, the toolbar sits centred above it, and the sidebar stays in place (leaving through it saves first).
+
+The **◫** button at the end of the toolbar opens a **preview beside the text**. It follows what you type, about half a second behind, and keeps its place as it updates. It is most useful with **MD** on (Markdown on the left, the result on the right), and for tables, diagrams and slides. Your choice is remembered on that device.
+
+![The editor in a wide window: the note on the left, its preview on the right](../assets/images/shot-desktop-editor.png){ .shot-wide }
+
 ## Saving
 
 - The note **saves by itself** about 3 seconds after you stop typing. The top of the screen shows *Unsaved*, then *Saved*.

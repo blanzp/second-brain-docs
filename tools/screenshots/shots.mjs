@@ -30,6 +30,16 @@ async function open(hash, { width = 390, height = 780, scale = 2, keep = false }
   await calm(page)
   return page
 }
+/** A computer-sized window (no touch), for the wide layout with its sidebar. */
+async function desktop(hash, { width = 1280, height = 800 } = {}) {
+  await fetch(`${ORIGIN}/demo/reset`, { method: 'POST' })
+  const page = await (await browser.createBrowserContext()).newPage()
+  await page.setCacheEnabled(false)
+  await page.setViewport({ width, height, deviceScaleFactor: 2 })
+  await page.goto(`${ORIGIN}/app/${hash}`, { waitUntil: 'networkidle0' })
+  await calm(page)
+  return page
+}
 /** The same, with the Agents page (alpha) turned on in the demo server. `open` resets the demo, which turns it off again. */
 async function agents(hash, options = {}) {
   await fetch(`${ORIGIN}/demo/reset`, { method: 'POST' })
@@ -157,6 +167,19 @@ const shots = {
   'shot-agents.png': async (file) => {
     const page = await agents('#/agents')
     await page.waitForSelector('.agent-row'); await sleep(300)
+    await page.screenshot({ path: file })
+  },
+  // The wide layout: the sidebar and a wider page, and the editor with its preview beside the text
+  'shot-desktop.png': async (file) => {
+    const page = await desktop(`#/note/${SIENA}`)
+    await page.waitForSelector('.content table'); await sleep(1500)
+    await page.screenshot({ path: file })
+  },
+  'shot-desktop-editor.png': async (file) => {
+    const page = await desktop(`#/edit/${SIENA}`)
+    await page.waitForSelector('.cm-content'); await sleep(800)
+    await page.click('.toolbar .wide-only'); await sleep(2000)
+    await calm(page)
     await page.screenshot({ path: file })
   },
   // Proposals: an agent's report, with one approved and applied, one rejected, three waiting
