@@ -29,18 +29,18 @@ Open any note and tap **Edit** (the pencil).
 
 ## The toolbar
 
-On a phone the toolbar sits on top of the keyboard; on a computer it is above the note. Swipe it sideways for more.
+On a phone the toolbar sits on top of the keyboard; on a computer it is above the note. Swipe it sideways for more. Hover over a button on a computer to see its name.
 
 | Button | What it does |
 |---|---|
-| ☐ • 1. | Checkbox, bullet and numbered list |
-| ⇥ ⇤ | Indent and outdent, to nest list items |
-| **B** *I* ▮ ~~S~~ `</>` | Bold, italic, highlight, strikethrough, code |
-| H | Heading: tap again for a smaller one, and again to remove it |
-| `[[ ]]` 🔗 `#` | Link to a note, web link, tag |
-| 📷 | Add a picture |
-| ⋯ | More: insert a quote, callout, code block, table, divider, Mermaid diagram or today's date; **Find and replace**; go to the top or the end; word count |
-| ↶ ↷ | Undo and redo |
+| Ticked box, bullets, **1.** | Checkbox, bullet and numbered list |
+| Arrows into and out of lines | Indent and outdent, to nest list items |
+| **B**, *I*, marker pen, ~~S~~, angle brackets | Bold, italic, highlight, strikethrough, code |
+| **H** | Heading: tap again for a smaller one, and again to remove it |
+| `[[ ]]`, chain link, `#` | Link to a note, web link, tag |
+| Picture | Add a picture |
+| Three dots | More: insert a quote, callout, code block, table, divider, Mermaid diagram or today's date; **Find and replace**; go to the top or the end; word count |
+| Curved arrows | Undo and redo |
 | MD | Show the raw Markdown |
 
 Tapping a formatting button twice puts the text back as it was. With text selected, **Code block** and **Callout** go around it.
@@ -85,7 +85,7 @@ The raw block is always there under **MD**.
 
 ## Pictures
 
-Tap 📷 to take a photo or choose one from your library. On a computer you can also paste a picture or drag it in.
+Tap the picture button to take a photo or choose one from your library. On a computer you can also paste a picture or drag it in.
 
 - Large photos are **made smaller on your device** before they are sent, so your vault stays light.
 - The picture is saved in an `attachments` folder next to the note and appears where your cursor was.
@@ -95,7 +95,7 @@ Tap 📷 to take a photo or choose one from your library. On a computer you can 
 
 In a wide window the editor uses the room: the writing column is wider, the toolbar sits centred above it, and the sidebar stays in place (leaving through it saves first).
 
-The **◫** button at the end of the toolbar opens a **preview beside the text**. It follows what you type, about half a second behind, and keeps its place as it updates. It is most useful with **MD** on (Markdown on the left, the result on the right), and for tables, diagrams and slides. Your choice is remembered on that device.
+The **split-view button** at the end of the toolbar (a rectangle divided in two) opens a **preview beside the text**. It follows what you type, about half a second behind, and keeps its place as it updates. It is most useful with **MD** on (Markdown on the left, the result on the right), and for tables, diagrams and slides. Your choice is remembered on that device.
 
 ![The editor in a wide window: the note on the left, its preview on the right](../assets/images/shot-desktop-editor.png){ .shot-wide }
 

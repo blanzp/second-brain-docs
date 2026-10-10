@@ -37,6 +37,8 @@ In a wide window (about 1000 pixels and up: a laptop, or a tablet on its side) t
 - **Less repetition.** Home, Folders, Tasks and Settings show a plain heading instead of a bar with a back arrow, and a note's title appears once.
 - **Lists keep a comfortable width**: folders become a grid of cards, and Home puts your favorites in a column beside the recent notes.
 - **Pages are wider.** In a note, text keeps a comfortable line length while tables, code, diagrams and pictures use the full width, so wide tables stop scrolling sideways.
+- **Long notes get an outline.** From about 1200 pixels wide, a note's headings are listed beside it; click one to jump there, and the one you are reading is marked.
+- **A note's actions move into its bar**: Ask, Share, Organize and History sit at the top right, beside the star and the pencil.
 - **The editor can show a preview beside the text**: see [Writing](editor.md#on-a-computer).
 
 ![A note in a wide window: the sidebar on the left, the note beside it](../assets/images/shot-desktop.png){ .shot-wide }

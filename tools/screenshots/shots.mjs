@@ -94,8 +94,8 @@ const shots = {
   },
   'shot-organize.png': async (file) => {
     const page = await open(`#/note/${SIENA}`)
-    await page.waitForSelector('.chip-btn.organize'); await sleep(400)
-    await page.evaluate(() => document.querySelector('.chip-btn.organize').click())
+    await page.waitForSelector('.note-actions .chip-btn'); await sleep(400)
+    await page.evaluate(() => [...document.querySelectorAll('.note-actions .chip-btn')].find((b) => b.textContent.trim() === 'Organize').click())
     await page.waitForSelector('.sheet'); await sleep(500)
     await page.screenshot({ path: file })
   },
