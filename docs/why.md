@@ -24,6 +24,8 @@ Unibrain is the answer to both:
 
 Your notes are ordinary Markdown files in a **private GitHub repo that belongs to you**. There's no proprietary format, no export step and no lock-in. The same files open in any editor that understands Markdown, and your full history is in Git from day one.
 
+**A format that won't grow old.** Markdown is plain text with a few marks for headings, lists and links. It has been in use since 2004, and plain text has been readable on every computer for more than fifty years. A note you write today needs no app, no account and no conversion to be read in twenty years: any text editor opens it, and it still makes sense with the marks showing. Apps come and go, including this one; your notes don't depend on any of them.
+
 ### 2. Agents are accountable
 
 - Every change is **one commit**, labelled with the app that made it (`claude`, `chatgpt`, `web`…).

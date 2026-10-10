@@ -61,7 +61,7 @@ Unibrain gives them **one shared memory you own**. Ask any of them to *"research
 
     ---
 
-    Notes are ordinary Markdown in a private GitHub repo you own, with full history and nothing to export. Stop using the service and your notes stay right where they are.
+    Notes are ordinary Markdown in a private GitHub repo you own, with full history and nothing to export. Markdown is plain text, so your notes stay readable in any editor for decades, whatever happens to the apps. Stop using the service and your notes stay right where they are.
 
     [:octicons-arrow-right-24: Privacy and security](reference/privacy.md)
 
