@@ -34,6 +34,8 @@ The web app is where you **read, review and write**: what your agents saved, and
 In a wide window (about 1000 pixels and up: a laptop, or a tablet on its side) the app rearranges itself:
 
 - **The tab bar becomes a sidebar** down the left, with Home, Folders, New, Tasks and Offline, plus Agents (if [mission control](mission-control.md) is on) and Settings.
+- **Less repetition.** Home, Folders, Tasks and Settings show a plain heading instead of a bar with a back arrow, and a note's title appears once.
+- **Lists keep a comfortable width**: folders become a grid of cards, and Home puts your favorites in a column beside the recent notes.
 - **Pages are wider.** In a note, text keeps a comfortable line length while tables, code, diagrams and pictures use the full width, so wide tables stop scrolling sideways.
 - **The editor can show a preview beside the text**: see [Writing](editor.md#on-a-computer).
 
