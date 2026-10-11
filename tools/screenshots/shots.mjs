@@ -10,7 +10,7 @@ import { execFileSync } from 'node:child_process'
 import { fileURLToPath } from 'node:url'
 
 const HERE = path.dirname(fileURLToPath(import.meta.url))
-const OUT = path.join(HERE, '../../docs/assets/images')
+const OUT = process.env.OUT_DIR ?? path.join(HERE, '../../docs/assets/images') // OUT_DIR=/some/folder keeps them out of the docs
 const FRAMES = path.join(HERE, '.frames')
 const ORIGIN = process.env.DEMO_URL ?? 'http://127.0.0.1:8788'
 const CHROME = process.env.CHROME ?? '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
@@ -19,6 +19,20 @@ const SIENA = 'travel/Weekend%20in%20Siena.md'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: true })
+// SCHEME=dark node shots.mjs takes every picture in the app's dark theme (the docs use light)
+if (process.env.SCHEME) {
+  const makeContext = browser.createBrowserContext.bind(browser)
+  browser.createBrowserContext = async (...args) => {
+    const context = await makeContext(...args)
+    const makePage = context.newPage.bind(context)
+    context.newPage = async () => {
+      const page = await makePage()
+      await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: process.env.SCHEME }])
+      return page
+    }
+    return context
+  }
+}
 
 /** A phone-sized page on the demo app, starting from an untouched vault. */
 async function open(hash, { width = 390, height = 780, scale = 2, keep = false } = {}) {
