@@ -10,7 +10,7 @@ The 28 tools every connected app gets. Every tool that **writes** also accepts a
 
 | Tool | What it does |
 |---|---|
-| `vault_guide` | What the vault is for and how to write in it: your `AGENTS.md`, your settings and the note syntax. Agents call it first. |
+| `vault_guide` | How to use the server and how Unibrain works (tags, todos, proposals, note syntax), then your settings and your `AGENTS.md`. Agents call it first. |
 
 ## Find and read
 

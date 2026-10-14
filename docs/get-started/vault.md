@@ -33,12 +33,17 @@ You can see what the starter contains before you begin at [github.com/blanzp/uni
 
 ## Tell your AI what the vault is for
 
-Your vault has a file called **`AGENTS.md`** at the top (the starter includes one; in an empty vault, add it on GitHub with **Add file → Create new file**). Unibrain sends it to every AI app each time it connects, so all of them follow the same rules: where notes go, how you like them written, what never to store.
+Your vault has a file called **`AGENTS.md`** at the top (the starter includes one; in an empty vault, add it on GitHub with **Add file → Create new file**).
+
+Unibrain already tells every AI app how Unibrain works: its tools, tags, todos and lists, proposals, Markdown, and your vault's settings. `AGENTS.md` adds what is yours: what the vault is for, where notes go, how you like things done, and what never to do. Unibrain sends both to each app every time it connects, so all of them follow the same rules.
 
 Edit it whenever you like, in the Unibrain app or on GitHub; changes apply within a minute. The starter's version looks like this:
 
 ```markdown
 # Rules for AI assistants
+
+These are my rules for this vault. Unibrain already tells you how the app works (its tools,
+tags, todos, proposals, Markdown); this file says how I want my vault run.
 
 ## What this vault is for
 A shared brain for me and my AI assistants. I read and write it on my phone; assistants add to it
@@ -49,18 +54,20 @@ where the other left off: clear, self-contained, summary first.
 - `Projects/<name>/` — things I'm working on
 - `Areas/<name>/` — ongoing responsibilities (home, health, finances…)
 - `Resources/<topic>/` — reference material and research
-- `Archives/` — finished or inactive material (only move things here when I ask)
+- `Archives/` — finished or inactive material (only archive when I ask)
 - `inbox/` — when unsure where something belongs
 
-## Rules
-- Search before creating, to avoid duplicates; add to an existing note instead.
+## How I want you to work
+- Add to an existing note rather than starting a near-duplicate.
 - Cite sources with links.
-- Link related notes with [[Note Name]] only if they exist. Before finishing a new note, link it
-  to the notes it is clearly related to.
+- Before finishing a new note, link it to the notes it is clearly related to.
 - Edit notes directly when a change is small. Ask me before rewriting most of a note, changing
-  several notes at once, or renaming and moving things.
+  several notes at once, or renaming, moving or archiving things.
+- For tidying or anything in bulk, send me proposals instead of acting.
 - Never store passwords, API keys or account numbers — write where they're kept instead.
-- If your instructions give you a name, pass it as `agent` on every tool that writes.
+
+## Tags
+Topic tags I use: (add yours as they settle, e.g. `health`, `travel`, `recipes`).
 ```
 
 The folders above follow the popular PARA method. Use any structure you like and describe it here. More ideas: [Write your AGENTS.md](../guides/agents-md.md).

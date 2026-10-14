@@ -23,10 +23,10 @@ Full details: [MCP tools](../reference/tools.md).
 
 When an agent connects, Unibrain hands it a **vault guide**:
 
-1. **How the server works:** it handles Git, every write is a commit, prefer adding to rewriting, never recreate a note to move it.
-2. **Your `AGENTS.md`:** what the vault is for, where things go, your rules. You write it once, in your repo; every agent follows it.
+1. **How to use the server:** it handles Git, every write is a commit, re-read a note if a change is refused, never recreate a note to move it.
+2. **How Unibrain works:** properties and tags, todos and lists, [proposals](proposals.md), and the note syntax (links, embeds, callouts, tasks, math and every diagram type). The same for every vault.
 3. **Your [vault settings](settings.md):** your inbox and archive folders, time zone, and which tags mark lists rather than todos.
-4. **The note syntax:** links, embeds, callouts, tasks, math and every diagram type.
+4. **Your `AGENTS.md`:** what the vault is for, where things go, your rules. You write it once, in your repo; every agent follows it. It only needs what is yours: see [Write your AGENTS.md](../guides/agents-md.md).
 
 Change `AGENTS.md` and every agent picks it up within a minute, with no redeploy and no per-app setup.
 
