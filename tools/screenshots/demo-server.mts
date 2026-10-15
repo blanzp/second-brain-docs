@@ -112,8 +112,8 @@ const demoAgents = () => ({
   summary: { agents: 7, healthy: 6, needs: 3, problems: 1 },
   needs: [
     { kind: 'proposals', text: '3 proposals to approve or reject', detail: 'Tidy-up 2026-10-04 · T13–T16', action: 'Review', href: '#/note/reports/Tidy-up%202026-10-04.md', at: null },
-    { kind: 'attention', text: 'Car insurance renews 30 Nov', detail: 'from Bills watcher', action: 'Open', href: '#/note/home/House%20Admin.md', at: AGO(60) },
-    { kind: 'agent', text: "OpenClaw hasn't run", detail: 'expected daily 08:00 · 3 days late', action: 'Details', href: '#/agents/openclaw', at: AGO(72) },
+    { key: 'attention:demo:0', kind: 'attention', text: 'Car insurance renews 30 Nov', detail: 'from Bills watcher', action: 'Open', href: '#/note/home/House%20Admin.md', at: AGO(60) },
+    { key: 'overdue:openclaw:demo', kind: 'agent', text: "OpenClaw hasn't run", detail: 'expected daily 08:00 · 3 days late', action: 'Details', href: '#/agents/openclaw', at: AGO(72) },
   ],
   agents: [
     { id: 'openclaw', name: 'OpenClaw', schedule: 'daily 08:00', state: 'overdue', activity: { runs: 4, changes: 0 }, next: AGO(-16), lastSeen: AGO(80), due: AGO(8), lateMs: 72 * HOUR },

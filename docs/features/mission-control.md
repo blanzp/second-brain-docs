@@ -185,12 +185,14 @@ What `report_run` takes:
 
 ### Needs you
 
-Newest first, each with one place to go. Nothing is dismissed by hand: an item goes away when the thing behind it is dealt with. The **?** beside the title says how, in the app.
+What your agents want you to act on: warnings, and to-dos an agent left you. Updates that need nothing from you are in the timeline instead. Newest first, each with one place to go.
 
-- **Agents that are overdue or failed.** Clears when the agent next runs successfully.
+Once you have dealt with an item, tap **Done** beside it and it goes for good (the toast has an **Undo**). Proposals have no Done: you answer them instead. Items also clear by themselves, as below. The **?** beside the title says the same, in the app.
+
+- **Agents that are overdue or failed.** Clears when the agent next runs successfully. **Done** hides it until the next missed time or failed run, and it stops counting as failing on the home screen.
 - **[Proposals](proposals.md) to approve or reject:** unanswered lines such as `- [ ] **T16** File the inbox notes` in notes tagged `proposals`. Open the report and tick a proposal to approve it, or tap **Reject** beside it to turn it down for good. A proposal repeated in several reports is listed once, under the newest, and one answer anywhere counts for all of them.
-- **What an agent asked you to look at**, from its last report. Replaced by its next run.
-- **Rollbacks** the [safety net](safety.md) caught in the last week. Ticking or unticking a task in the app is never counted as one.
+- **What an agent asked you to look at**, from its last report. Replaced by its next run. One that points at a report of proposals clears once they are all answered.
+- **Rollbacks** the [safety net](safety.md) caught in the last week. Ticking or unticking a task in the app is never counted as one. Drops off after a week, or tap **Done** once you have checked it.
 
 ### Scheduled next
 
@@ -231,6 +233,7 @@ Recording happens on the Unibrain server, **not in your vault**, and only while 
 | The path of the one note the call was about | Any other argument to a tool |
 | The commit it made | Pictures, tokens, passwords |
 | What the agent put in `report_run` | |
+| Which Needs you items you marked Done | |
 
 Only you see your agents' activity. Recordings are kept for **30 days**, then deleted. **Delete Agents data** in Settings removes them at once, and they go with the rest of your data if you leave. See [Privacy and security](../reference/privacy.md).
 
@@ -258,7 +261,6 @@ The switch and four values are in `.brain/settings.json`, under `missionControl`
 - **No notifications.** You have to open the page; nothing is pushed to your phone.
 - **Agents can't ask how things are.** There is no tool yet for one agent to read the page and tell you.
 - **Only what goes through Unibrain is seen.** Work an agent does elsewhere shows only as its final report.
-- **A safety-net warning can't be dismissed.** It shows for a week.
 - **Past activity is re-sorted** when you change a registry note, since who did what is worked out each time the page opens.
 - **Offline**, the page shows the last copy your phone saved.
 
