@@ -192,7 +192,7 @@ Once you have dealt with an item, tap **Done** beside it and it goes for good (t
 - **Agents that are overdue or failed.** Clears when the agent next runs successfully. **Done** hides it until the next missed time or failed run, and it stops counting as failing on the home screen.
 - **[Proposals](proposals.md) to approve or reject:** unanswered lines such as `- [ ] **T16** File the inbox notes` in notes tagged `proposals`. Open the report and tick a proposal to approve it, or tap **Reject** beside it to turn it down for good. A proposal repeated in several reports is listed once, under the newest, and one answer anywhere counts for all of them.
 - **What an agent asked you to look at**, from its last report. Replaced by its next run. One that points at a report of proposals clears once they are all answered.
-- **Rollbacks** the [safety net](safety.md) caught in the last week. Ticking or unticking a task in the app is never counted as one. Drops off after a week, or tap **Done** once you have checked it.
+- **Rollbacks** the [safety net](safety.md) caught in the last week. Your own edits in the app are never counted as one. Drops off after a week, or tap **Done** once you have checked it.
 
 ### Scheduled next
 

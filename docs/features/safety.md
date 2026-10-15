@@ -33,6 +33,8 @@ Unibrain inspects each new commit as it arrives, including ones pushed from outs
 - **Rollbacks:** notes reverted to an older version, the classic sign of a stale copy being pushed from another device.
 - **Deletions:** notes removed outright.
 
+Your own changes in the web app are never flagged as rollbacks: the app only saves on top of the latest version, so it can't push a stale copy. Deleting a line you just added, unticking a task or restoring from History puts older text back on purpose.
+
 Nothing is undone automatically. Flagged commits show up when you or an agent ask for *recent changes* or *vault health*, with the exact commit to revert.
 
 ## Safe by construction
